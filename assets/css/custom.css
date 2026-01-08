@@ -1,0 +1,4 @@
+/* Make profile image less circular */
+.author__avatar img {
+    border-radius: 5% !important;
+}
