@@ -23,25 +23,25 @@ repository               : "agutersandu/agutersandu.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Andrei Guter-Sandu"
+  avatar           : "profile.png" # filename of your profile image placed in /images/ (e.g., "profile.png")
+  name             : "Dr Andrei Guter-Sandu"
   pronouns         : # example: "she/her"  
   bio              : "Assistant Professor of International Political Economy"
   location         : "United Kingdom"
-  employer         : "University of Bath"
+  employer         : "Uni of Bath / Global Climate Forum"
   uri              : "https://researchportal.bath.ac.uk/en/persons/andrei-guter-sandu/publications/"
   email            : "ags77@bath.ac.uk" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=r7RANCoAAAAJ&hl=en"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0000-0003-3143-6555"
   semantic         : # URL
-  ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  ssrn             : "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6922774"
+  pubmed           : # URL 
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -57,7 +57,7 @@ author:
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "andrei-guter-sandu"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username

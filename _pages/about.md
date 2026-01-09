@@ -1,56 +1,179 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+<style>
+  /* Make text slightly smaller */
+  .page__content p {
+    font-size: 0.9em;
+  }
+  
+  /* Visual callout styling */
+  .project-highlight {
+    border-left: 4px solid #007bff;
+    padding: 1rem 1rem 1rem 1.5rem;
+    margin: 1.5rem 0;
+    background: #f8f9fa;
+    font-size: 0.9em;
+  }
+  
+  /* Section dividers - smaller spacing */
+  .section-divider {
+    border-top: 1px solid #e0e0e0;
+    margin: 1.8rem 0 1.2rem 0;
+  }
+  
+  /* Section headers */
+  .section-header {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Featured publications */
+  .featured-pubs {
+    margin: 1.5rem 0;
+  }
+  
+  .pub-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .pub-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.3rem;
+  }
+  
+  .pub-title a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .pub-title a:hover {
+    color: #007bff;
+  }
+  
+  .pub-journal {
+    font-style: italic;
+    color: #555;
+    font-size: 0.95em;
+  }
+  
+  .pub-description {
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  /* Institutional logos */
+  .affiliations-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e0e0e0;
+  }
+  
+  .logos-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    opacity: 0.7;
+  }
+  
+  .logo-item {
+    flex: 0 1 auto;
+    text-align: center;
+  }
+  
+  .logo-item img {
+    max-height: 60px;
+    max-width: 180px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  
+  .logo-item img:hover {
+    filter: grayscale(0%);
+  }
+</style>
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+I'm an Assistant Professor of International Political Economy at the **University of Bath** and a Senior Researcher at the **Global Climate Forum** in Berlin. My research examines how states mobilise financial resources to pursue ambitious objectives—from war and reconstruction to energy transitions and climate action—particularly when these goals appear fiscally or politically unaffordable under conventional budget constraints.
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+<div class="section-divider"></div>
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+<h3 class="section-header">Current Research</h3>
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+<div class="project-highlight">
+I lead <strong>FINTRANS-UK</strong>, an ESRC-funded research project investigating the hidden mechanics of how Britain has repeatedly funded the seemingly unaffordable across history. Drawing on archival research at the Bank of England and the British National Archives, the project traces how the UK has engaged in fiscal innovation to circumvent fiscal constraints and mobilise private capital for public purposes—from the extraordinary public investment that built the UK's post-war electricity system through the <em>Industrial and Commercial Finance Corporation</em> and <em>Finance Corporation for Industry</em>, to the <em>Exchange Equalisation Account</em>'s role as a wartime off-balance-sheet fiscal agency, to today's arm's-length derisking regime for green infrastructure investment.
+</div>
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+This historical work sits within a broader research agenda on the **political economy of energy transitions**, **the evolution of monetary and financial systems**, and **the changing nature of state capacity**. Together with colleagues at the Global Climate Forum, I investigate how states use off-balance-sheet fiscal agencies to reconfigure fiscal governance to finance large-scale transitions. 
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+Recent work examines green macro-financial governance in the European monetary architecture, assessing the capacity of Eurozone institutions to finance the net-zero transition; the Recovery and Resilience Facility as "Schrödinger's off-balance-sheet fiscal agency" that is simultaneously on and off the EU budget; and comparative historical analyses of off-balance-sheet fiscal agencies in wartime economies (Germany 1914-1918 and 1933-1945, Britain 1939-1945) and post-war reconstruction.
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+<div class="section-divider"></div>
 
-**Markdown generator**
+<h3 class="section-header">Featured Publications</h3>
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+<div class="featured-pubs">
+  <div class="pub-item">
+    <div class="pub-title"><a href="YOUR_PUBLICATION_URL_HERE" target="_blank">Off-balance-sheet fiscal agencies and the financing of the British electricity system, 1945-1990</a></div>
+    <div class="pub-journal">New Political Economy</div>
+    <div class="pub-description">Examines how Britain used quasi-fiscal innovations to mobilise private capital for postwar electricity infrastructure.</div>
+  </div>
+  
+  <div class="pub-item">
+    <div class="pub-title"><a href="YOUR_PUBLICATION_URL_HERE" target="_blank">Green macro-financial governance in the European monetary architecture</a></div>
+    <div class="pub-journal">Journal of European Integration</div>
+    <div class="pub-description">Assesses the capacity of Eurozone institutions to finance the net-zero transition through fiscal and monetary policy.</div>
+  </div>
+  
+  <div class="pub-item">
+    <div class="pub-title"><a href="YOUR_PUBLICATION_URL_HERE" target="_blank">Outcome-based finance and the governance of social impact bonds</a></div>
+    <div class="pub-journal">Environment and Planning A</div>
+    <div class="pub-description">Analyzes how financial instruments reshape valuation processes and contract design in public service delivery.</div>
+  </div>
+</div>
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+<div class="section-divider"></div>
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+<h3 class="section-header">Earlier Research</h3>
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+My earlier research explored the so-called financialisation of social policy through outcome-based finance markets and social impact bonds, examining how social impact is conceived, measured, and accounted for when financial instruments are used to fund social services. This work on valuation processes, contract design, and the governance of public services through private financial markets informs my current focus on how states use private financial actors, instruments, and markets in governing grand challenges.
+
+<div class="section-divider"></div>
+
+<h3 class="section-header">Background</h3>
+
+I hold a PhD in International Political Economy from **City, University of London**, and was previously an ESRC Postdoctoral Fellow at the **London School of Economics** and a Research Officer on the QUAD project at LSE's **Centre for Analysis of Risk and Regulation**. My research has been published in *Competition and Change*, *Environment and Planning A*, *Journal of European Integration*, *New Political Economy*, and other leading journals. I supervise doctoral research on climate finance, energy systems, and the geopolitics of finance.
+
+<div class="affiliations-section">
+  <h3 class="section-header">Affiliations</h3>
+  <div class="logos-container">
+    <div class="logo-item">
+      <img src="/images/logos/bath-logo.png" alt="University of Bath">
+    </div>
+    <div class="logo-item">
+      <img src="/images/logos/gcf-logo.png" alt="Global Climate Forum">
+    </div>
+    <div class="logo-item">
+      <img src="/images/logos/esrc-logo.png" alt="ESRC">
+    </div>
+    <div class="logo-item">
+      <img src="/images/logos/city-logo.png" alt="City, University of London">
+    </div>
+    <div class="logo-item">
+      <img src="/images/logos/lse-logo.png" alt="London School of Economics">
+    </div>
+  </div>
+</div>
