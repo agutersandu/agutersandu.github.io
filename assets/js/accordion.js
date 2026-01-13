@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
   toggles.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var item = btn.closest('.rq-item');
+      if (!item) return;
+
       var body = item.querySelector('.rq-body');
       var isOpen = item.classList.contains('open');
 
@@ -29,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Research Agenda theme accordions
 document.addEventListener('DOMContentLoaded', function () {
   var themeToggles = document.querySelectorAll('.theme-toggle');
   if (!themeToggles.length) return;
@@ -36,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
   themeToggles.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var card = btn.closest('.theme-accordion');
+      if (!card) return;
+
       var body = card.querySelector('.theme-body');
       var isOpen = card.classList.contains('open');
 
@@ -58,4 +63,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-

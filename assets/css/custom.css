@@ -1,4 +1,254 @@
 /* Make profile image less circular */
 .author__avatar img {
-    border-radius: 5% !important;
+  border-radius: 5% !important;
 }
+
+/* FINTRANS-UK ESRC logo in top-right corner */
+.project-box-featured {
+  position: relative;
+}
+
+.fintrans-logo-top {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+}
+
+.fintrans-logo-top img {
+  max-height: 32px;
+  width: auto;
+  display: block;
+  opacity: 0.95;
+}
+
+/* Slightly smaller on narrow screens */
+@media (max-width: 640px) {
+  .fintrans-logo-top {
+    top: 0.75rem;
+    right: 1rem;
+  }
+
+  .fintrans-logo-top img {
+    max-height: 28px;
+  }
+}
+
+/* Small extra space between FINTRANS heading and lead sentence */
+.fintrans-lead {
+  margin-top: 0.5rem;
+}
+
+/* Core Research Questions inside FINTRANS-UK box */
+.core-rq-heading {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Accordion container */
+.rq-accordion {
+  border-top: 1px solid #e2e4e8;
+  margin-top: 0.5rem;
+}
+
+/* Individual items */
+.rq-item {
+  border-bottom: 1px solid #e2e4e8;
+}
+
+/* Toggle row */
+.rq-toggle {
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rq-toggle:focus {
+  outline: none;
+}
+
+.rq-label {
+  font-weight: 600;
+  font-size: inherit;   /* use theme body size */
+  color: #222222;
+}
+
+.rq-icon {
+  font-size: 1.1rem;
+  color: #2c5aa0;
+  transition: transform 0.2s ease;
+}
+
+/* Accordion body */
+.rq-body {
+  display: none;
+  padding: 0 1.25rem 0.9rem 1.25rem;
+  font-size: inherit;   /* same as FINTRANS body text */
+  line-height: 1.7;
+  color: #444444;
+}
+
+.rq-item.open .rq-body {
+  display: block;
+}
+
+.rq-item.open .rq-icon {
+  transform: rotate(45deg); /* plus → X */
+}
+
+/* Section divider */
+.section-divider {
+  margin: 2.5rem 0;
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #dddddd, transparent);
+}
+
+/* Research Agenda boxes – accordion cards */
+.theme-box {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #d7e2f2;
+  border-left: 4px solid #2c5aa0;    /* blue accent for active themes */
+  border-radius: 6px;
+  padding: 0;                        /* padding handled inside */
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.theme-box:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}
+
+/* Clickable header: title + question line */
+.theme-toggle {
+  width: 100%;
+  padding: 1.1rem 1.5rem 0.75rem 1.5rem;
+  background: transparent;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  cursor: pointer;
+}
+
+.theme-header {
+  flex: 1;
+}
+
+.theme-box h4 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #203a73;
+}
+
+.theme-question {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555555;
+}
+
+.theme-caret {
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  color: #2c5aa0;
+  transition: transform 0.2s ease;
+}
+
+/* Body content revealed on click */
+.theme-body {
+  display: none;
+  padding: 0 1.5rem 1.3rem 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #444444;
+  border-top: 1px solid #e2e4e8;
+}
+
+.theme-accordion.open .theme-body {
+  display: block;
+}
+
+.theme-accordion.open .theme-caret {
+  transform: rotate(45deg);
+}
+
+/* Small, unified text size for Research Agenda + Teaching */
+.theme-box p,
+.page-teaching p,
+.page-teaching li,
+.course-box {
+  font-size: 0.85rem !important;   /* smaller than the theme default */
+  line-height: 1.7;
+}
+
+/* Teaching course boxes – CURRENT teaching */
+.course-box {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #d7e2f2;
+  border-left: 4px solid #2c5aa0;   /* blue accent for current courses */
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.course-box h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #203a73;
+}
+
+.course-box:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}
+
+/* Teaching course boxes – PAST teaching */
+.course-box-past {
+  border-color: #d0d4db;
+  border-left-color: #a0a4ad;      /* grey accent */
+  background: #f7f8fa;
+  color: #555555;
+}
+
+/* Past teaching header & label */
+.course-box-past h4 {
+  color: #555555;
+}
+
+.course-box-past::before {
+  content: "Past course";
+  position: absolute;
+  top: 0.6rem;
+  right: 1.0rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888888;
+}
+
+/* Hide hamburger menu icon in header on all screens */
+.masthead .greedy-nav__toggle,
+.greedy-nav__toggle,
+.masthead button[aria-label="Toggle navigation"],
+.masthead .greedy-nav button {
+  display: none !important;
+}
+
