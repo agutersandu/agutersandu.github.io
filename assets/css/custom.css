@@ -365,3 +365,41 @@
     max-height: 32px;
   }
 }
+
+/* Expandable research text on mobile */
+@media (max-width: 768px) {
+  .research-description {
+    position: relative;
+  }
+  
+  .research-description.collapsed {
+    max-height: 150px;
+    overflow: hidden;
+  }
+  
+  .research-description.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(transparent, white);
+  }
+  
+  .read-more-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    width: 100%;
+  }
+  
+  .read-more-btn:hover {
+    background: #0056b3;
+  }
+}
