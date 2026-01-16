@@ -297,9 +297,9 @@
 
 /* Contact button and dropdown styling */
 .btn--contact {
-  background-color: #007bff;
-  color: white;
-  border: none;
+  background-color: rgba(222, 210, 190, 0.85);  /* warm beige */
+  color: #1e1e1e;                               /* dark text for contrast */
+  border: 1px solid rgba(185, 171, 150, 0.9);   /* subtle border */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
@@ -308,7 +308,7 @@
 }
 
 .btn--contact:hover {
-  background-color: #0056b3;
+  background-color: rgba(210, 195, 175, 0.95);  /* slightly deeper beige on hover */
 }
 
 .contact-links {
@@ -370,14 +370,14 @@
 @media (max-width: 768px) {
   .research-description {
     position: relative;
-    margin-bottom: 1rem;        /* NEW: spacing below the text block */
+    margin-bottom: 1rem;
   }
-  
+
   .research-description.collapsed {
     max-height: 150px;
     overflow: hidden;
   }
-  
+
   .research-description.collapsed::after {
     content: '';
     position: absolute;
@@ -387,25 +387,26 @@
     height: 50px;
     background: linear-gradient(transparent, white);
   }
-  
+
   .read-more-btn {
-    background: #007bff;
-    color: white;
-    border: none;
+    background-color: rgba(222, 210, 190, 0.85); /* warm beige */
+    color: #1e1e1e;
+    border: 1px solid rgba(185, 171, 150, 0.9);
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 0.75rem;        /* already gives space above the button */
+    margin-top: 0.75rem;
     font-size: 0.875rem;
     width: 100%;
   }
-  
+
   .read-more-btn:hover {
-    background: #0056b3;
+    background-color: rgba(210, 195, 175, 0.95);
   }
 }
 
 .read-more-btn {
-  margin-bottom: 0.75rem;       /* extra gap below button */
+  margin-bottom: 0.75rem;
 }
+
 
