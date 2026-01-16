@@ -451,3 +451,21 @@
 .author-header-row .author__name {
   margin-bottom: 0;
 }
+
+/* Align name and Connect on one line */
+.author-header-row {
+  display: flex;
+  align-items: baseline;          /* line up text baselines */
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Ensure the name doesn't add extra bottom space */
+.author-header-row .author__name {
+  margin-bottom: 0;
+}
+
+/* Let the subtitle sit nicely under the header row */
+.author__bio {
+  margin-top: 0.15rem;
+}
