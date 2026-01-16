@@ -351,11 +351,17 @@
     flex-direction: column;
   }
   
-  .project-box-featured img,
-  .fintrans-logo-top img {
+  /* Fix the absolutely positioned logo container */
+  .project-box-featured .fintrans-logo-top {
+    position: static !important;
+    margin-bottom: 1rem;
+  }
+  
+  .project-box-featured .fintrans-logo-top img {
     position: static !important;
     float: none !important;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto;
     display: block;
+    max-height: 32px;
   }
 }
