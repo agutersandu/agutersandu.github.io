@@ -63,15 +63,13 @@ I hold a PhD in International Political Economy from **City, University of Londo
 <h2>Contact & Profiles</h2>
 
 <div class="contact-profiles-block">
-  <p class="contact-profiles-line">
+
+  <div class="contact-profiles-links">
     <a href="mailto:ags77@bath.ac.uk"
        rel="nofollow noopener noreferrer"
        class="contact-email-link">
       <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> ags77@bath.ac.uk
     </a>
-  </p>
-
-  <div class="contact-profiles-links">
     <a href="https://scholar.google.com/citations?user=r7RANCoAAAAJ&hl=en"
        target="_blank" rel="nofollow noopener noreferrer">
       <i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar
@@ -89,6 +87,7 @@ I hold a PhD in International Political Economy from **City, University of Londo
       <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
     </a>
   </div>
+
 </div>
 
 </div>
