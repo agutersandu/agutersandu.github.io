@@ -472,3 +472,11 @@
   text-decoration: none;
   color: #000000;
 }
+
+/* Hide 'Read more' button on desktop, keep on mobile */
+@media (min-width: 64em) {
+  .read-more-btn {
+    display: none !important;
+  }
+}
+
