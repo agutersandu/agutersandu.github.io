@@ -247,7 +247,8 @@
 /* Hide hamburger menu icon in header on all screens */
 .masthead .greedy-nav__toggle,
 .greedy-nav__toggle,
-.masthead button[aria-label="Toggle navigation"] {
+.masthead button[aria-label="Toggle navigation"],
+.masthead .greedy-nav button {
   display: none !important;
 }
 
