@@ -322,12 +322,6 @@
   text-decoration: underline;
 }
 
-
-/* Ensure icon matches text colour */
-.btn--contact i {
-  color: #5A3A32 !important;
-}
-
 .contact-links {
   background: #f8f9fa;
   border: 1px solid #dee2e6;
