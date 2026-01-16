@@ -247,10 +247,10 @@
 /* Hide hamburger menu icon in header on all screens */
 .masthead .greedy-nav__toggle,
 .greedy-nav__toggle,
-.masthead button[aria-label="Toggle navigation"],
-.masthead .greedy-nav button {
+.masthead button[aria-label="Toggle navigation"] {
   display: none !important;
 }
+
 
 /* Mobile Navigation Fixes - Horizontal Scroll */
 @media (max-width: 768px) {
