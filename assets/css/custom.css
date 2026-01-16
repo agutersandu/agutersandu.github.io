@@ -323,10 +323,12 @@
 }
 
 /* Remove blue active/focus background from Contact */
-.btn--contact:focus {
+.btn--contact:focus,
+.btn--contact:active {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.15);
-  border-radius: 4px;
+  box-shadow: none;
+  background: none;
+  color: #000000 !important;
 }
 
 .contact-links {
@@ -406,25 +408,34 @@
     background: linear-gradient(transparent, white);
   }
 
+  /* Read more as text link with chevron */
   .read-more-btn {
-    background-color: rgba(222, 210, 190, 0.85); /* warm beige */
-    color: #1e1e1e;
-    border: 1px solid rgba(185, 171, 150, 0.9);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    background: none;
+    border: none;
+    color: #0056b3;
+    padding: 0.25rem 0;
     cursor: pointer;
-    margin-top: 0.75rem;
-    font-size: 0.875rem;
-    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .read-more-btn::after {
+    content: '›';
+    font-size: 0.9rem;
   }
 
   .read-more-btn:hover {
-    background-color: rgba(210, 195, 175, 0.95);
+    text-decoration: underline;
+    background: none;
   }
 }
 
+/* spacing below button */
 .read-more-btn {
   margin-bottom: 0.75rem;
 }
-
-
