@@ -439,15 +439,15 @@
   margin-bottom: 0.75rem;
 }
 
-/* Contact & profiles block – mobile only */
+/* Contact & Profiles block – mobile only */
 .contact-profiles-block {
   margin: 1.5rem 0;
   font-size: 0.9rem;
 }
 
-/* Hide on desktop/tablet, show only on small screens */
+/* Hide heading + block on desktop/tablet */
 @media (min-width: 64em) {
-  .contact-profiles-block {
+  .contact-profiles-wrapper {
     display: none !important;
   }
 }
@@ -458,7 +458,7 @@
 
 .contact-profiles-links {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;   /* icons in a neat column */
   gap: 0.25rem;
   font-size: 0.9rem;
 }
