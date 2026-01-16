@@ -58,21 +58,19 @@ My earlier research explored the so-called financialisation of social policy thr
 
 I hold a PhD in International Political Economy from **City, University of London**, and was previously an ESRC Postdoctoral Fellow at the **London School of Economics** and a Research Officer on the QUAD project at LSE's **Centre for Analysis of Risk and Regulation**. My research has been published in *Competition and Change*, *Environment and Planning A*, *Journal of European Integration*, *New Political Economy*, and other leading journals. I supervise doctoral research on climate finance, energy systems, and the geopolitics of finance.
 
-## Contact & profiles
+<div class="contact-profiles-wrapper">
+  
+## Contact & Profiles
 
 <div class="contact-profiles-block">
   <p class="contact-profiles-line">
     Email: <a href="mailto:ags77@bath.ac.uk">ags77@bath.ac.uk</a>
   </p>
   <div class="contact-profiles-links">
-    <a href="https://scholar.google.com/citations?user=r7RANCoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-    <span>·</span>
-    <a href="https://orcid.org/0000-0003-3143-6555" target="_blank" rel="noopener">ORCID</a>
-    <span>·</span>
-    <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6922774" target="_blank" rel="noopener">SSRN</a>
-    <span>·</span>
-    <a href="https://www.linkedin.com/in/andrei-guter-sandu" target="_blank" rel="noopener">LinkedIn</a>
+    <!-- icons + links will go here in step 3 -->
   </div>
+</div>
+
 </div>
 
 ## Affiliations
