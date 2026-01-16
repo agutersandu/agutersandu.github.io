@@ -26,7 +26,25 @@
 
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
+    <button class="btn btn--contact" id="contact-toggle"><i class="fas fa-fw fa-envelope"></i> Contact</button>
+    <div class="contact-links" id="contact-links" style="display: none;">
+      {% if author.email %}
+        <a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a>
+      {% endif %}
+      {% if author.googlescholar %}
+        <a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i> Google Scholar</a>
+      {% endif %}
+      {% if author.orcid %}
+        <a href="{{ author.orcid }}"><i class="ai ai-orcid ai-fw" aria-hidden="true"></i> ORCID</a>
+      {% endif %}
+      {% if author.ssrn %}
+        <a href="{{ author.ssrn }}"><i class="ai ai-ssrn ai-fw" aria-hidden="true"></i> SSRN</a>
+      {% endif %}
+      {% if author.linkedin %}
+        <a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+      {% endif %}
+    </div>
+
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
