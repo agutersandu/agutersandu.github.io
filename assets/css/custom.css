@@ -443,18 +443,6 @@
 /* Align name and Connect on one line */
 .author-header-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.author-header-row .author__name {
-  margin-bottom: 0;
-}
-
-/* Align name and Connect on one line */
-.author-header-row {
-  display: flex;
   align-items: baseline;          /* line up text baselines */
   justify-content: space-between;
   gap: 1rem;
@@ -465,7 +453,8 @@
   margin-bottom: 0;
 }
 
-/* Let the subtitle sit nicely under the header row */
+/* Let the subtitle sit nicely under the header row and wrap under the name */
 .author__bio {
   margin-top: 0.15rem;
+  max-width: 32rem;               /* tweak if you want different wrap */
 }
