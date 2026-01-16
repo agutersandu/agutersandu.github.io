@@ -1,189 +1,189 @@
 /* Make profile image less circular */
 .author__avatar img {
-border-radius: 5% !important;
+  border-radius: 5% !important;
 }
 
 /* FINTRANS-UK ESRC logo in top-right corner */
 .project-box-featured {
-position: relative;
+  position: relative;
 }
 
 .fintrans-logo-top {
-position: absolute;
-top: 1rem;
-right: 1.25rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
 }
 
 .fintrans-logo-top img {
-max-height: 32px;
-width: auto;
-display: block;
-opacity: 0.95;
+  max-height: 32px;
+  width: auto;
+  display: block;
+  opacity: 0.95;
 }
 
 /* Slightly smaller on narrow screens */
 @media (max-width: 640px) {
-.fintrans-logo-top {
-top: 0.75rem;
-right: 1rem;
-}
+  .fintrans-logo-top {
+    top: 0.75rem;
+    right: 1rem;
+  }
 
-.fintrans-logo-top img {
-max-height: 28px;
-}
+  .fintrans-logo-top img {
+    max-height: 28px;
+  }
 }
 
 /* Small extra space between FINTRANS heading and lead sentence */
 .fintrans-lead {
-margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 /* Core Research Questions inside FINTRANS-UK box */
 .core-rq-heading {
-margin-top: 2rem;
-margin-bottom: 0.75rem;
-font-size: 1.0rem;
-font-weight: 600;
-color: #333333;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: #333333;
 }
 
 /* Accordion container */
 .rq-accordion {
-border-top: 1px solid #e2e4e8;
-margin-top: 0.5rem;
+  border-top: 1px solid #e2e4e8;
+  margin-top: 0.5rem;
 }
 
 /* Individual items */
 .rq-item {
-border-bottom: 1px solid #e2e4e8;
+  border-bottom: 1px solid #e2e4e8;
 }
 
 /* Toggle row */
 .rq-toggle {
-width: 100%;
-padding: 0.9rem 1.25rem;
-background: transparent;
-border: none;
-display: flex;
-justify-content: space-between;
-align-items: center;
-text-align: left;
-cursor: pointer;
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
 }
 
 .rq-toggle:focus {
-outline: none;
+  outline: none;
 }
 
 .rq-label {
-font-weight: 600;
-font-size: inherit; /* use theme body size */
-color: #222222;
+  font-weight: 600;
+  font-size: inherit; /* use theme body size */
+  color: #222222;
 }
 
 .rq-icon {
-font-size: 1.1rem;
-color: #2c5aa0;
-transition: transform 0.2s ease;
+  font-size: 1.1rem;
+  color: #2c5aa0;
+  transition: transform 0.2s ease;
 }
 
 /* Accordion body */
 .rq-body {
-display: none;
-padding: 0 1.25rem 0.9rem 1.25rem;
-font-size: inherit; /* same as FINTRANS body text */
-line-height: 1.7;
-color: #444444;
+  display: none;
+  padding: 0 1.25rem 0.9rem 1.25rem;
+  font-size: inherit; /* same as FINTRANS body text */
+  line-height: 1.7;
+  color: #444444;
 }
 
 .rq-item.open .rq-body {
-display: block;
+  display: block;
 }
 
 .rq-item.open .rq-icon {
-transform: rotate(45deg); /* plus → X */
+  transform: rotate(45deg); /* plus → X */
 }
 
 /* Section divider */
 .section-divider {
-margin: 2.5rem 0;
-border: 0;
-height: 2px;
-background: linear-gradient(to right, transparent, #dddddd, transparent);
+  margin: 2.5rem 0;
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #dddddd, transparent);
 }
 
 /* Research Agenda boxes – accordion cards */
 .theme-box {
-position: relative;
-background: #ffffff;
-border: 1px solid #d7e2f2;
-border-left: 4px solid #2c5aa0; /* blue accent for active themes */
-border-radius: 6px;
-padding: 0; /* padding handled inside */
-margin-bottom: 1.5rem;
-box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-transition: box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #d7e2f2;
+  border-left: 4px solid #2c5aa0; /* blue accent for active themes */
+  border-radius: 6px;
+  padding: 0; /* padding handled inside */
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .theme-box:hover {
-box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
 }
 
 /* Clickable header: title + question line */
 .theme-toggle {
-width: 100%;
-padding: 1.1rem 1.5rem 0.75rem 1.5rem;
-background: transparent;
-border: 0;
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-text-align: left;
-cursor: pointer;
+  width: 100%;
+  padding: 1.1rem 1.5rem 0.75rem 1.5rem;
+  background: transparent;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  cursor: pointer;
 }
 
 .theme-header {
-flex: 1;
+  flex: 1;
 }
 
 .theme-box h4 {
-margin-top: 0;
-margin-bottom: 0.25rem;
-font-weight: 600;
-color: #203a73;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #203a73;
 }
 
 .theme-question {
-margin: 0;
-font-size: 0.85rem;
-font-weight: 500;
-color: #555555;
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555555;
 }
 
 .theme-caret {
-margin-left: 1rem;
-font-size: 1.1rem;
-color: #2c5aa0;
-transition: transform 0.2s ease;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  color: #2c5aa0;
+  transition: transform 0.2s ease;
 }
 
 /* Body content revealed on click */
 .theme-body {
-display: none;
-padding: 0 1.5rem 1.3rem 1.5rem;
-font-size: 0.85rem;
-line-height: 1.7;
-color: #444444;
-border-top: 1px solid #e2e4e8;
+  display: none;
+  padding: 0 1.5rem 1.3rem 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #444444;
+  border-top: 1px solid #e2e4e8;
 }
 
 .theme-accordion.open .theme-body {
-display: block;
+  display: block;
 }
 
 .theme-accordion.open .theme-caret {
-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* Small, unified text size for Research Agenda + Teaching */
@@ -191,57 +191,57 @@ transform: rotate(45deg);
 .page-teaching p,
 .page-teaching li,
 .course-box {
-font-size: 0.85rem !important; /* smaller than the theme default */
-line-height: 1.7;
+  font-size: 0.85rem !important; /* smaller than the theme default */
+  line-height: 1.7;
 }
 
 /* Teaching course boxes – CURRENT teaching */
 .course-box {
-position: relative;
-background: #ffffff;
-border: 1px solid #d7e2f2;
-border-left: 4px solid #2c5aa0; /* blue accent for current courses */
-border-radius: 6px;
-padding: 1.25rem 1.5rem;
-margin-bottom: 1.25rem;
-box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-transition: box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #d7e2f2;
+  border-left: 4px solid #2c5aa0; /* blue accent for current courses */
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .course-box h4 {
-margin-top: 0;
-margin-bottom: 0.5rem;
-font-weight: 600;
-color: #203a73;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #203a73;
 }
 
 .course-box:hover {
-box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
 }
 
 /* Teaching course boxes – PAST teaching */
 .course-box-past {
-border-color: #d0d4db;
-border-left-color: #a0a4ad; /* grey accent */
-background: #f7f8fa;
-color: #555555;
+  border-color: #d0d4db;
+  border-left-color: #a0a4ad; /* grey accent */
+  background: #f7f8fa;
+  color: #555555;
 }
 
 /* Past teaching header & label */
 .course-box-past h4 {
-color: #555555;
+  color: #555555;
 }
 
 .course-box-past::before {
-content: "Past course";
-position: absolute;
-top: 0.6rem;
-right: 1.0rem;
-font-size: 0.7rem;
-text-transform: uppercase;
-letter-spacing: 0.06em;
-color: #888888;
+  content: "Past course";
+  position: absolute;
+  top: 0.6rem;
+  right: 1.0rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888888;
 }
 
 /* Hide hamburger menu icon in header on all screens */
@@ -249,193 +249,203 @@ color: #888888;
 .greedy-nav__toggle,
 .masthead button[aria-label="Toggle navigation"],
 .masthead .greedy-nav button {
-display: none !important;
+  display: none !important;
 }
-
 
 /* Mobile Navigation Fixes - Horizontal Scroll */
 @media (max-width: 768px) {
-.greedy-nav {
-position: relative;
+  .greedy-nav {
+    position: relative;
+  }
+
+  .greedy-nav .visible-links {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    padding: 0.5rem 0;
+  }
+
+  .greedy-nav .visible-links::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  /* Fade indicator on the right */
+  .greedy-nav::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+    pointer-events: none;
+  }
+
+  .greedy-nav .visible-links li {
+    flex-shrink: 0;
+  }
+
+  .greedy-nav a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
 }
 
-.greedy-nav .visible-links {
-display: flex;
-flex-wrap: nowrap;
-overflow-x: auto;
-overflow-y: hidden;
--webkit-overflow-scrolling: touch;
-scrollbar-width: none; /* Firefox */
-padding: 0.5rem 0;
-}
-
-.greedy-nav .visible-links::-webkit-scrollbar {
-display: none; /* Chrome, Safari */
-}
-
-/* Fade indicator on the right */
-.greedy-nav::after {
-content: '';
-position: absolute;
-right: 0;
-top: 0;
-bottom: 0;
-width: 30px;
-background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
-pointer-events: none;
-}
-
-.greedy-nav .visible-links li {
-flex-shrink: 0;
-}
-
-.greedy-nav a {
-padding: 0.5rem 1rem;
-white-space: nowrap;
-}
-}
 /* Contact link-style button in header */
 .btn--contact {
-background: none;
-border: none;
-padding: 0;
-margin: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 
-display: inline-flex;
-align-items: center;
-gap: 0.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 
-color: #000000 !important; /* black, like other text */
-font-size: 0.8rem; /* similar to subtitle */
-font-weight: 400;
-letter-spacing: 0.02em;
-text-transform: none;
-cursor: pointer;
+  color: #000000 !important; /* black, like other text */
+  font-size: 0.8rem; /* similar to subtitle */
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  cursor: pointer;
 }
 
 .btn--contact i {
-color: #000000 !important;
-font-size: 0.9rem;
+  color: #000000 !important;
+  font-size: 0.9rem;
 }
 
 .btn--contact:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Remove blue active/focus background from Contact */
 .btn--contact:focus,
 .btn--contact:active {
-outline: none;
-box-shadow: none;
-background: none;
-color: #000000 !important;
+  outline: none;
+  box-shadow: none;
+  background: none;
+  color: #000000 !important;
 }
 
 .contact-links {
-background: #f8f9fa;
-border: 1px solid #dee2e6;
-border-radius: 4px;
-padding: 0.5rem;
-margin-bottom: 1rem;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .contact-links a {
-display: block;
-padding: 0.75rem 0.5rem;
-color: #333;
-text-decoration: none;
-border-bottom: 1px solid #dee2e6;
+  display: block;
+  padding: 0.75rem 0.5rem;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #dee2e6;
 }
 
 .contact-links a:last-child {
-border-bottom: none;
+  border-bottom: none;
 }
 
 .contact-links a:hover {
-background-color: #e9ecef;
+  background-color: #e9ecef;
 }
 
-/* Hide on desktop (shows only on mobile) */
+/* Hide Contact button + dropdown under name on desktop (mobile-only) */
 @media (min-width: 64em) {
-.btn--contact,
-.contact-links {
-display: none !important;
+  .btn--contact,
+  .contact-links {
+    display: none !important;
+  }
 }
-}
-
 
 /* Fix logo overlap on mobile research page */
 @media (max-width: 768px) {
-.project-box-featured {
-display: flex;
-flex-direction: column;
-}
+  .project-box-featured {
+    display: flex;
+    flex-direction: column;
+  }
 
-/* Fix the absolutely positioned logo container */
-.project-box-featured .fintrans-logo-top {
-position: static !important;
-margin-bottom: 1rem;
-}
+  /* Fix the absolutely positioned logo container */
+  .project-box-featured .fintrans-logo-top {
+    position: static !important;
+    margin-bottom: 1rem;
+  }
 
-.project-box-featured .fintrans-logo-top img {
-position: static !important;
-float: none !important;
-margin: 0 auto;
-display: block;
-max-height: 32px;
-}
+  .project-box-featured .fintrans-logo-top img {
+    position: static !important;
+    float: none !important;
+    margin: 0 auto;
+    display: block;
+    max-height: 32px;
+  }
 }
 
 /* Expandable research text on mobile */
 @media (max-width: 768px) {
-.research-description {
-position: relative;
-margin-bottom: 1rem;
-}
+  .research-description {
+    position: relative;
+    margin-bottom: 1rem;
+  }
 
-.research-description.collapsed {
-max-height: 150px;
-overflow: hidden;
-}
+  .research-description.collapsed {
+    max-height: 150px;
+    overflow: hidden;
+  }
 
-.research-description.collapsed::after {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-height: 50px;
-background: linear-gradient(transparent, white);
-}
+  .research-description.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(transparent, white);
+  }
 
-/* Read more as text link with chevron */
-.read-more-btn {
-background: none;
-border: none;
-color: #0056b3;
-padding: 0.25rem 0;
-cursor: pointer;
-margin-top: 0.5rem;
-font-size: 0.85rem;
-font-weight: 400;
-text-align: left;
-display: inline-flex;
-align-items: center;
-gap: 0.25rem;
-}
+  /* Read more as text link with chevron */
+  .read-more-btn {
+    background: none;
+    border: none;
+    color: #0056b3;
+    padding: 0.25rem 0;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
 
-.read-more-btn::after {
-content: '›';
-font-size: 0.9rem;
-}
+  .read-more-btn::after {
+    content: '›';
+    font-size: 0.9rem;
+  }
 
-.read-more-btn:hover {
-text-decoration: underline;
-background: none;
-}
+  .read-more-btn:hover {
+    text-decoration: underline;
+    background: none;
+  }
 }
 
 /* spacing below button */
 .read-more-btn {
-margin-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* NEW: Nav Connect button – mobile-only */
+.nav-connect-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-connect-mobile {
+    display: inline-block;
+  }
 }
