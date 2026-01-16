@@ -8,14 +8,6 @@
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
             <a href="{{ base_path }}/">{{ site.title }}</a>
           </li>
-
-          <!-- Mobile-only Connect button before About -->
-          <li class="masthead__menu-item nav-connect-mobile">
-            <button class="btn btn--contact" id="contact-toggle">
-              <i class="fas fa-fw fa-envelope"></i> Connect
-            </button>
-          </li>
-
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
