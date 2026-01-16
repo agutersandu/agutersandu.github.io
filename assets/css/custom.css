@@ -438,3 +438,36 @@
 .read-more-btn {
   margin-bottom: 0.75rem;
 }
+
+/* Contact & profiles block – mobile only */
+.contact-profiles-block {
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Hide on desktop/tablet, show only on small screens */
+@media (min-width: 64em) {
+  .contact-profiles-block {
+    display: none !important;
+  }
+}
+
+.contact-profiles-line {
+  margin-bottom: 0.25rem;
+}
+
+.contact-profiles-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.contact-profiles-links a {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+.contact-profiles-links a:hover {
+  text-decoration: underline;
+}
