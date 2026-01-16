@@ -253,30 +253,44 @@
 }
 
 
-
-/* Mobile Navigation Fixes */
+/* Mobile Navigation Fixes - Horizontal Scroll */
 @media (max-width: 768px) {
-  /* Make navigation responsive on mobile */
+  .greedy-nav {
+    position: relative;
+  }
+  
   .greedy-nav .visible-links {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    padding: 0.5rem 0;
+  }
+  
+  .greedy-nav .visible-links::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  
+  /* Fade indicator on the right */
+  .greedy-nav::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+    pointer-events: none;
   }
   
   .greedy-nav .visible-links li {
-    flex: 0 1 auto;
-    margin: 0.25rem;
+    flex-shrink: 0;
   }
   
   .greedy-nav a {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
-  }
-  
-  /* Ensure nav links are visible and properly sized */
-  #site-nav {
-    max-width: 100%;
-    overflow-x: auto;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
   }
 }
