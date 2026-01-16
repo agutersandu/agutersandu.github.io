@@ -59,10 +59,8 @@ My earlier research explored the so-called financialisation of social policy thr
 I hold a PhD in International Political Economy from **City, University of London**, and was previously an ESRC Postdoctoral Fellow at the **London School of Economics** and a Research Officer on the QUAD project at LSE's **Centre for Analysis of Risk and Regulation**. My research has been published in *Competition and Change*, *Environment and Planning A*, *Journal of European Integration*, *New Political Economy*, and other leading journals. I supervise doctoral research on climate finance, energy systems, and the geopolitics of finance.
 
 <div class="contact-profiles-wrapper">
-  
-<div class="contact-profiles-wrapper">
-  
-## Contact & Profiles
+
+<h2>Contact & Profiles</h2>
 
 <div class="contact-profiles-block">
   <p class="contact-profiles-line">
