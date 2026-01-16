@@ -444,7 +444,7 @@
   display: flex;
   align-items: baseline;          /* line up text baselines */
   justify-content: space-between;
-  gap: 1.5rem;                    /* a bit more distance */
+  gap: 1.5rem;
 }
 
 /* Ensure the name doesn't add extra bottom space */
@@ -452,8 +452,8 @@
   margin-bottom: 0;
 }
 
-/* Subtitle spacing and width */
+/* Subtitle spacing and width – forced to two lines under the name */
 .author__content .author__bio {
-  margin-top: 0.35rem !important; /* slightly larger gap below name row */
-  max-width: 28rem !important;    /* narrower so it feels under the name */
+  margin-top: 0.35rem !important;
+  max-width: 18rem !important;    /* much narrower: pushes "International Political Economy" to the next line */
 }
