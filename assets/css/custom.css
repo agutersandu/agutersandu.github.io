@@ -444,7 +444,7 @@
   display: flex;
   align-items: baseline;          /* line up text baselines */
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;                    /* a bit more distance */
 }
 
 /* Ensure the name doesn't add extra bottom space */
@@ -452,8 +452,8 @@
   margin-bottom: 0;
 }
 
-/* Let the subtitle sit nicely under the header row and wrap under the name */
+/* Subtitle spacing and width */
 .author__content .author__bio {
-  margin-top: 0.15rem !important;
-  max-width: 32rem !important;    /* tweak 30–34rem for different wrapping */
+  margin-top: 0.35rem !important; /* slightly larger gap below name row */
+  max-width: 28rem !important;    /* narrower so it feels under the name */
 }
