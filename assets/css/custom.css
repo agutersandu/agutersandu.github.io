@@ -294,23 +294,34 @@
     white-space: nowrap;
   }
 }
-/* Contact button and dropdown styling – slim pill */
+/* Contact link-style button in header */
 .btn--contact {
-  background: transparent;
-  color: #5A3A32 !important;
-  border: 1px solid rgba(185, 171, 150, 0.9);
-  padding: 0.35rem 1.1rem;
-  border-radius: 999px;               /* full pill */
-  cursor: pointer;
-  margin-bottom: 0;
-  font-size: 0.8rem;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  color: #000000 !important;       /* black, like other text */
+  font-size: 0.8rem;               /* similar to subtitle */
   font-weight: 400;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.btn--contact i {
+  color: #000000 !important;
+  font-size: 0.9rem;
 }
 
 .btn--contact:hover {
-  background-color: rgba(222, 210, 190, 0.35);
+  text-decoration: underline;
 }
+
 
 /* Ensure icon matches text colour */
 .btn--contact i {
