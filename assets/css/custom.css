@@ -252,3 +252,31 @@
   display: none !important;
 }
 
+
+
+/* Mobile Navigation Fixes */
+@media (max-width: 768px) {
+  /* Make navigation responsive on mobile */
+  .greedy-nav .visible-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .greedy-nav .visible-links li {
+    flex: 0 1 auto;
+    margin: 0.25rem;
+  }
+  
+  .greedy-nav a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Ensure nav links are visible and properly sized */
+  #site-nav {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
