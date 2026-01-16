@@ -294,3 +294,51 @@
     white-space: nowrap;
   }
 }
+
+/* Contact button and dropdown styling */
+.btn--contact {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.btn--contact:hover {
+  background-color: #0056b3;
+}
+
+.contact-links {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-links a {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.contact-links a:last-child {
+  border-bottom: none;
+}
+
+.contact-links a:hover {
+  background-color: #e9ecef;
+}
+
+/* Hide on desktop (shows only on mobile) */
+@media (min-width: 64em) {
+  .btn--contact,
+  .contact-links {
+    display: none !important;
+  }
+}
