@@ -342,3 +342,20 @@
     display: none !important;
   }
 }
+
+
+/* Fix logo overlap on mobile research page */
+@media (max-width: 768px) {
+  .project-box-featured {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-box-featured img,
+  .fintrans-logo-top img {
+    position: static !important;
+    float: none !important;
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+}
