@@ -370,6 +370,7 @@
 @media (max-width: 768px) {
   .research-description {
     position: relative;
+    margin-bottom: 1rem;        /* NEW: spacing below the text block */
   }
   
   .research-description.collapsed {
@@ -394,7 +395,7 @@
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;        /* already gives space above the button */
     font-size: 0.875rem;
     width: 100%;
   }
@@ -403,3 +404,8 @@
     background: #0056b3;
   }
 }
+
+.read-more-btn {
+  margin-bottom: 0.75rem;       /* extra gap below button */
+}
+
