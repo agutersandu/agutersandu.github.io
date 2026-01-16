@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : ""
+title                    : "Andrei Guter-Sandu"
 title_separator          : "-"
-name        : &name "Andrei Guter-Sandu"
-description : &description "Assistant Professor of International Political Economy at the University of Bath. Research on large-scale societal transformations, monetary theory, state capacity."
+name                     : &name "Andrei Guter-Sandu"
+description              : &description "Assistant Professor of International Political Economy at the University of Bath. Research on large-scale societal transformations, monetary theory, state capacity."
 url                      : https://agutersandu.com # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
