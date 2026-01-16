@@ -64,13 +64,12 @@ I hold a PhD in International Political Economy from **City, University of Londo
 
 <div class="contact-profiles-block">
   <p class="contact-profiles-line">
-    Email: <a href="mailto:ags77@bath.ac.uk">ags77@bath.ac.uk</a>
+    <a href="mailto:ags77@bath.ac.uk" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> ags77@bath.ac.uk
+    </a>
   </p>
 
   <div class="contact-profiles-links">
-    <a href="mailto:ags77@bath.ac.uk" rel="nofollow noopener noreferrer">
-      <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email
-    </a>
     <a href="https://scholar.google.com/citations?user=r7RANCoAAAAJ&hl=en"
        target="_blank" rel="nofollow noopener noreferrer">
       <i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar
