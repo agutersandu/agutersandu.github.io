@@ -294,6 +294,7 @@
     white-space: nowrap;
   }
 }
+
 /* Contact link-style button in header */
 .btn--contact {
   background: none;
@@ -331,6 +332,7 @@
   color: #000000 !important;
 }
 
+/* Contact dropdown box */
 .contact-links {
   background: #f8f9fa;
   border: 1px solid #dee2e6;
@@ -355,7 +357,7 @@
   background-color: #e9ecef;
 }
 
-/* Hide on desktop (shows only on mobile) */
+/* Hide Connect + dropdown on desktop; show only on mobile */
 @media (min-width: 64em) {
   .btn--contact,
   .contact-links {
@@ -439,21 +441,23 @@
 .read-more-btn {
   margin-bottom: 0.75rem;
 }
-/* Align name and Connect on one line */
+
+/* Desktop: name + Connect row only (no subtitle width constraint) */
 .author-header-row {
   display: flex;
-  align-items: baseline;          /* line up text baselines */
+  align-items: baseline;
   justify-content: space-between;
   gap: 1.5rem;
 }
 
-/* Ensure the name doesn't add extra bottom space */
 .author-header-row .author__name {
   margin-bottom: 0;
 }
 
-/* Subtitle spacing and width – forced to two lines under the name */
-.author__content .author__bio {
-  margin-top: 0.35rem !important;
-  max-width: 18rem !important;    /* much narrower: pushes "International Political Economy" to the next line */
+/* Mobile: also constrain subtitle width so it wraps under the name */
+@media (max-width: 768px) {
+  .author__content .author__bio {
+    margin-top: 0.35rem !important;
+    max-width: 18rem !important;  /* forces roughly two lines under the name */
+  }
 }
