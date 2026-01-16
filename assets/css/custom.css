@@ -294,32 +294,27 @@
     white-space: nowrap;
   }
 }
-
-/* Contact button and dropdown styling */
+/* Contact button and dropdown styling – slim pill */
 .btn--contact {
-  background-color: rgba(222, 210, 190, 0.85);
-  color: #5A3A32 !important;          /* force brown text */
+  background: transparent;
+  color: #5A3A32 !important;
   border: 1px solid rgba(185, 171, 150, 0.9);
-  padding: 0.4rem 0.9rem;
-  border-radius: 6px;
+  padding: 0.35rem 1.1rem;
+  border-radius: 999px;               /* full pill */
   cursor: pointer;
-  margin-bottom: 1rem;
-  font-size: 0.8rem;                  /* smaller text */
-  font-weight: 400;                   /* thinner, like the subtitle */
-  letter-spacing: 0.02em;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.btn--contact:hover {
+  background-color: rgba(222, 210, 190, 0.35);
 }
 
 /* Ensure icon matches text colour */
 .btn--contact i {
   color: #5A3A32 !important;
-}
-
-.btn--contact i {
-  color: #5A3A32;
-}
-
-.btn--contact:hover {
-  background-color: rgba(210, 195, 175, 0.95);  /* slightly deeper beige on hover */
 }
 
 .contact-links {
