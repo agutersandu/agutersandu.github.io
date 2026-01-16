@@ -297,14 +297,18 @@
 
 /* Contact button and dropdown styling */
 .btn--contact {
-  background-color: rgba(222, 210, 190, 0.85);  /* warm beige */
-  color: #1e1e1e;                               /* dark text for contrast */
-  border: 1px solid rgba(185, 171, 150, 0.9);   /* subtle border */
+  background-color: rgba(222, 210, 190, 0.85);  /* your beige */
+  color: #5A3A32;                               /* warm brown text */
+  border: 1px solid rgba(185, 171, 150, 0.9);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
   margin-bottom: 1rem;
   font-size: 0.875rem;
+}
+
+.btn--contact i {
+  color: #5A3A32;
 }
 
 .btn--contact:hover {
