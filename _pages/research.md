@@ -123,9 +123,9 @@ My research sits at the intersection of political economy, monetary theory, publ
   </button>
 
   <div class="theme-body">
-    <p>This research examines how <strong>wartime mobilisation and post-war reconstruction</strong> fundamentally reshaped modern finance. Wars represent extreme moments when states must finance objectives on a scale that dwarfs peacetime expenditure, forcing fiscal and financial innovations that permanently alter how these systems operate.</p>
+    <p>I research how <strong>wartime mobilisation and post-war reconstruction</strong> fundamentally reshaped modern finance. Wars represent extreme moments when states must finance objectives on a scale that dwarfs peacetime expenditure, forcing fiscal and financial innovations that permanently alter how these systems operate.</p>
 
-    <p>I analyse these transformations comparatively across different episodes: Germany during WWI (1914-1918) developed elaborate mechanisms to finance total war while appearing to maintain fiscal orthodoxy; Nazi Germany (1933-1945) pioneered <strong>camouflaged sovereign borrowing</strong> through specialised financial vehicles; Britain's WWII experience (1939-1945) saw the Exchange Equalisation Account repurposed as a wartime fiscal agency. Post-war reconstruction then demanded new institutions to rebuild industrial capacity when conventional public finance appeared inadequate.</p>
+    <p>I analyse these transformations comparatively across different episodes: for instance, Germany during WWI (1914-1918) developed elaborate mechanisms to finance total war while appearing to maintain fiscal orthodoxy; Nazi Germany (1933-1945) pioneered <strong>camouflaged sovereign borrowing</strong> through specialised financial vehicles; Britain's WWII experience (1939-1945) saw the Exchange Equalisation Account repurposed as a wartime fiscal agency. Post-war reconstruction then demanded new institutions to rebuild industrial capacity when conventional public finance appeared inadequate.</p>
 
     <p>These historical episodes reveal how extraordinary demands generate <strong>fiscal and financial innovations</strong> that persist long after the immediate crisis—government-sponsored enterprises, national development banks, special purpose vehicles that became enduring features of modern state finance.</p>
   </div>
@@ -143,11 +143,11 @@ My research sits at the intersection of political economy, monetary theory, publ
   </button>
 
   <div class="theme-body">
-    <p>This research traces how states have progressively restructured their governing functions by turning to innovative financial mechanisms when direct public provision appears fiscally or politically untenable—representing a fundamental shift from direct provision toward orchestrating private capital through sophisticated financial engineering.</p>
+    <p>I look at how states have progressively restructured their governing functions by turning to innovative financial mechanisms when direct public provision appears fiscally or politically untenable—representing a fundamental shift from direct provision toward orchestrating private capital through financial engineering.</p>
 
     <p>My earlier research at LSE examined <strong>outcome-based finance and social impact bonds</strong> as mechanisms for funding social services. These instruments reflected states delegating not just financing but also risk, performance measurement, and policy implementation to private financial markets—reimagining state capacity as contract design and risk management rather than direct service provision.</p>
 
-    <p>Whether financing social services through impact bonds, electricity infrastructure through contracts-for-difference, or war through special fiscal vehicles, states repeatedly reconfigure capacity by enlisting private financial actors. The common thread reveals state capacity as not a fixed attribute, but a <strong>flexible repertoire of financial and institutional arrangements</strong> that states continuously adapt to meet extraordinary demands.</p>
+    <p>Whether financing social services through impact bonds, electricity infrastructure through Contracts-for-Difference, or war through special financial vehicles, states repeatedly reconfigure capacity by enlisting private financial actors. The common thread reveals state capacity as not a fixed attribute, but a <strong>flexible repertoire of institutional arrangements</strong> that states continuously adapt to meet extraordinary demands.</p>
   </div>
 </div>
 
@@ -157,7 +157,7 @@ My research sits at the intersection of political economy, monetary theory, publ
 
 My research combines:
 
-- **Archival research** at institutions like the Bank of England and British National Archives  
+- **Archival research** at various institutions and in various geographies  
 - **Historical institutional analysis** to trace policy evolution  
-- **Comparative political economy** methods  
-- **Policy document analysis** and interviews with key stakeholders  
+- **Quantitative analysis of administrative and longitudinal data** in historical and contemporary settings  
+- **Semi-structured interviews** with key stakeholders  
