@@ -297,14 +297,21 @@
 
 /* Contact button and dropdown styling */
 .btn--contact {
-  background-color: rgba(222, 210, 190, 0.85);  /* your beige */
-  color: #5A3A32;                               /* warm brown text */
+  background-color: rgba(222, 210, 190, 0.85);
+  color: #5A3A32 !important;          /* force brown text */
   border: 1px solid rgba(185, 171, 150, 0.9);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
   cursor: pointer;
   margin-bottom: 1rem;
-  font-size: 0.875rem;
+  font-size: 0.8rem;                  /* smaller text */
+  font-weight: 400;                   /* thinner, like the subtitle */
+  letter-spacing: 0.02em;
+}
+
+/* Ensure icon matches text colour */
+.btn--contact i {
+  color: #5A3A32 !important;
 }
 
 .btn--contact i {
