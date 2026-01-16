@@ -251,7 +251,6 @@
   display: none !important;
 }
 
-
 /* Mobile Navigation Fixes - Horizontal Scroll */
 @media (max-width: 768px) {
   .greedy-nav {
@@ -437,15 +436,4 @@
 /* spacing below button */
 .read-more-btn {
   margin-bottom: 0.75rem;
-}
-
-/* NEW: Nav Connect button – mobile-only */
-.nav-connect-mobile {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .nav-connect-mobile {
-    display: inline-block;
-  }
 }
