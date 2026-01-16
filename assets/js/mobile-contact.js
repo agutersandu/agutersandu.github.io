@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         contactToggle.innerHTML = '<i class="fas fa-fw fa-times"></i> Close';
       } else {
         contactLinks.style.display = 'none';
-        contactToggle.innerHTML = '<i class="fas fa-fw fa-envelope"></i> Contact';
+        contactToggle.innerHTML = '<i class="fas fa-fw fa-envelope"></i> Connect';
       }
     });
   }
