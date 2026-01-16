@@ -452,21 +452,7 @@
   }
 }
 
-.contact-profiles-line {
-  margin-bottom: 0.25rem;
-}
-
-/* Email row styling */
-.contact-email-link {
-  text-decoration: none;
-  color: #444444;
-}
-
-.contact-email-link:hover {
-  text-decoration: none;
-  color: #000000;
-}
-
+/* Column layout for all contact rows (email + profiles) */
 .contact-profiles-links {
   display: flex;
   flex-direction: column;
@@ -474,12 +460,15 @@
   font-size: 0.85rem;
 }
 
-.contact-profiles-links a {
+/* All links in the block, including email */
+.contact-profiles-links a,
+.contact-email-link {
   text-decoration: none;
   color: #444444;
 }
 
-.contact-profiles-links a:hover {
+.contact-profiles-links a:hover,
+.contact-email-link:hover {
   text-decoration: none;
   color: #000000;
 }
