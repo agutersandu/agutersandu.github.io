@@ -60,14 +60,35 @@ I hold a PhD in International Political Economy from **City, University of Londo
 
 <div class="contact-profiles-wrapper">
   
+<div class="contact-profiles-wrapper">
+  
 ## Contact & Profiles
 
 <div class="contact-profiles-block">
   <p class="contact-profiles-line">
     Email: <a href="mailto:ags77@bath.ac.uk">ags77@bath.ac.uk</a>
   </p>
+
   <div class="contact-profiles-links">
-    <!-- icons + links will go here in step 3 -->
+    <a href="mailto:ags77@bath.ac.uk" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email
+    </a>
+    <a href="https://scholar.google.com/citations?user=r7RANCoAAAAJ&hl=en"
+       target="_blank" rel="nofollow noopener noreferrer">
+      <i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar
+    </a>
+    <a href="https://orcid.org/0000-0003-3143-6555"
+       target="_blank" rel="nofollow noopener noreferrer">
+      <i class="ai ai-orcid-square ai-fw" aria-hidden="true"></i> ORCID
+    </a>
+    <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6922774"
+       target="_blank" rel="nofollow noopener noreferrer">
+      <i class="ai ai-ssrn-square ai-fw" aria-hidden="true"></i> SSRN
+    </a>
+    <a href="https://www.linkedin.com/in/andrei-guter-sandu"
+       target="_blank" rel="nofollow noopener noreferrer">
+      <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+    </a>
   </div>
 </div>
 
