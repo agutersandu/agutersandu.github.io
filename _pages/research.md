@@ -13,19 +13,22 @@ author_profile: true
   </div>
 
 <h3>FINTRANS-UK: Financing Large-Scale British Transformations</h3>
-<p class="fintrans-lead">
-  I lead <strong>FINTRANS-UK</strong>, an ESRC-funded research project investigating the hidden mechanics of how Britain has repeatedly funded the seemingly unaffordable across history. Drawing on archival research, longitudinal and administrative data, and semi-structured interviews, the project traces how the UK has engaged in public finance innovation to circumvent fiscal constraints and mobilise private capital for public purposes—from the <em>Exchange Equalisation Account</em>'s role as a wartime off‑balance‑sheet fiscal agency, through the extraordinary public investment that built the post‑war electricity system, and specialist vehicles such as the <em>Industrial and Commercial Finance Corporation</em> and <em>Finance Corporation for Industry</em> that filled financing gaps for industry, to today's arm's‑length, market-shaping approach to financing the UK's Green Transition.
-</p>
-<p>
-    The project combines historical and contemporary analysis. The archival component draws on institutional records from the Bank of England and British National Archives—including Treasury correspondence, operational documents, and balance sheet data—to reconstruct how earlier financing vehicles were designed, operated, and justified. Using transactional balance sheet flow analysis and time-series data, it traces how these mechanisms allowed Britain to expand its effective fiscal capacity without formally abandoning fiscal discipline. The contemporary component analyses today's Green Transition financing through administrative data from regulatory bodies and market counterparties, complemented by semi-structured interviews with policymakers, financial actors, and energy market participants.
-</p>
-<p>
-  FINTRANS-UK develops both historical understanding and forward-looking policy insights, linking past financing innovations to current debates on how Britain can fund decarbonisation under tight fiscal constraints. By showing how earlier generations of policymakers used institutional creativity to finance large-scale transformations, the project identifies recurring patterns in how states reconfigure fiscal governance when conventional tools prove insufficient. This historical perspective informs contemporary policy design by revealing which institutional arrangements successfully mobilised private capital for public purposes, which mechanisms created hidden fiscal risks, and how the distributional consequences of off-balance-sheet financing shaped political sustainability over time.
-</p>
-<p>
-  <strong>Funded by:</strong> Economic and Social Research Council (ESRC) – £335,000<br>
-  <strong>Duration:</strong> 09/2026–08/2028
-</p>
+<div class="research-description collapsed">
+  <p class="fintrans-lead">
+    I lead <strong>FINTRANS-UK</strong>, an ESRC-funded research project investigating the hidden mechanics of how Britain has repeatedly funded the seemingly unaffordable across history. Drawing on archival research, longitudinal and administrative data, and semi-structured interviews, the project traces how the UK has engaged in public finance innovation to circumvent fiscal constraints and mobilise private capital for public purposes—from the <em>Exchange Equalisation Account</em>'s role as a wartime off‑balance‑sheet fiscal agency, through the extraordinary public investment that built the post‑war electricity system, and specialist vehicles such as the <em>Industrial and Commercial Finance Corporation</em> and <em>Finance Corporation for Industry</em> that filled financing gaps for industry, to today's arm's‑length, market-shaping approach to financing the UK's Green Transition.
+  </p>
+  <p>
+      The project combines historical and contemporary analysis. The archival component draws on institutional records from the Bank of England and British National Archives—including Treasury correspondence, operational documents, and balance sheet data—to reconstruct how earlier financing vehicles were designed, operated, and justified. Using transactional balance sheet flow analysis and time-series data, it traces how these mechanisms allowed Britain to expand its effective fiscal capacity without formally abandoning fiscal discipline. The contemporary component analyses today's Green Transition financing through administrative data from regulatory bodies and market counterparties, complemented by semi-structured interviews with policymakers, financial actors, and energy market participants.
+  </p>
+  <p>
+    FINTRANS-UK develops both historical understanding and forward-looking policy insights, linking past financing innovations to current debates on how Britain can fund decarbonisation under tight fiscal constraints. By showing how earlier generations of policymakers used institutional creativity to finance large-scale transformations, the project identifies recurring patterns in how states reconfigure fiscal governance when conventional tools prove insufficient. This historical perspective informs contemporary policy design by revealing which institutional arrangements successfully mobilised private capital for public purposes, which mechanisms created hidden fiscal risks, and how the distributional consequences of off-balance-sheet financing shaped political sustainability over time.
+  </p>
+  <p>
+    <strong>Funded by:</strong> Economic and Social Research Council (ESRC) – £335,000<br>
+    <strong>Duration:</strong> 09/2026–08/2028
+  </p>
+</div>
+<button class="read-more-btn">Read more</button>
 
   <h4 class="core-rq-heading">Core Research Questions</h4>
 
