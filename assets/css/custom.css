@@ -441,7 +441,7 @@
 
 /* Contact & Profiles block – mobile only */
 .contact-profiles-block {
-  margin: 1.5rem 0;
+  margin: 1.0rem 0;
   font-size: 0.9rem;
 }
 
@@ -456,19 +456,30 @@
   margin-bottom: 0.25rem;
 }
 
+/* Email row styling */
+.contact-email-link {
+  text-decoration: none;
+  color: #444444;
+}
+
+.contact-email-link:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
 .contact-profiles-links {
   display: flex;
-  flex-direction: column;   /* icons in a neat column */
+  flex-direction: column;
   gap: 0.25rem;
-  font-size: 0.85rem;       /* slightly smaller, like sidebar */
+  font-size: 0.85rem;
 }
 
 .contact-profiles-links a {
   text-decoration: none;
-  color: #444444;           /* neutral grey like body/sidebar text */
+  color: #444444;
 }
 
 .contact-profiles-links a:hover {
   text-decoration: none;
-  color: #000000;           /* optional: a bit darker on hover */
+  color: #000000;
 }
