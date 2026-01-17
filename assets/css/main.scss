@@ -599,3 +599,31 @@ body {
   display: none !important;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-card {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border-left: 3px solid #6c757d;
+}
+
+.contact-card.primary {
+  border-left-color: #007bff;
+}
+
+.contact-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  font-size: 1.05rem;
+}
+
+.contact-card a {
+  font-weight: 500;
+}
