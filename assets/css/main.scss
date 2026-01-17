@@ -599,11 +599,14 @@ body {
   display: none !important;
 }
 
-/* Remove all automatic thin separators in page content;
-   keep only explicit .section-divider elements */
-.page .page__content h2,
-.page .page__content h3,
-.page .page__content > * + * {
+/* Final reset: remove any subtle separators in page body */
+.page .page__content > * {
   border-top: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Keep explicit section dividers only */
+.section-divider {
+  border-top: 1px solid #e0e0e0;
 }
 
