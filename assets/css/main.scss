@@ -599,14 +599,3 @@ body {
   display: none !important;
 }
 
-/* Final reset: remove any subtle separators in page body */
-.page .page__content > * {
-  border-top: 0 !important;
-  box-shadow: none !important;
-}
-
-/* Keep explicit section dividers only */
-.section-divider {
-  border-top: 1px solid #e0e0e0;
-}
-
