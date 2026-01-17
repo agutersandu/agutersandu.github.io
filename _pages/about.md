@@ -25,33 +25,24 @@ This historical work sits within a broader research agenda on the **political ec
 ## Featured Publications
 
 <div class="pub-card">
-#### Securitising System Costs: The United Kingdom's Arm's-Length Derisking Regime for the Green Transition
-
+<h4>Securitising System Costs: The United Kingdom's Arm's-Length Derisking Regime for the Green Transition</h4>
 <p class="pub-meta">OBFA-TRANSFORM Working Paper No. 12-EN, 2025</p>
-
-Examines Britain's system of levies, contracts, and payment obligations through which electricity system costs are securitised to finance the green transition.
-
-[Read paper →](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5747102)
+<p>Examines Britain's system of levies, contracts, and payment obligations through which electricity system costs are securitised to finance the green transition.</p>
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5747102" target="_blank" class="pub-link">Read paper →</a>
 </div>
 
 <div class="pub-card">
-#### Monetary Architecture and the Green Transition
-
+<h4>Monetary Architecture and the Green Transition</h4>
 <p class="pub-meta">Environment and Planning A: Economy and Space (with Murau, S. and Haas, A.), 2023</p>
-
-Develops a framework for understanding how monetary architectures shape possibilities for financing the Green Transition.
-
-[Read paper →](https://doi.org/10.1177/0308518X231197296)
+<p>Develops a framework for understanding how monetary architectures shape possibilities for financing the Green Transition.</p>
+<a href="https://doi.org/10.1177/0308518X231197296" target="_blank" class="pub-link">Read paper →</a>
 </div>
 
 <div class="pub-card">
-#### Green Macro-Financial Governance in the European Monetary Architecture
-
+<h4>Green Macro-Financial Governance in the European Monetary Architecture</h4>
 <p class="pub-meta">Competition and Change (with Haas, A. and Murau, S.), 2024</p>
-
-Analyses the capacity of Eurozone institutions to finance climate action through fiscal and monetary policy coordination.
-
-[Read paper →](https://doi.org/10.1177/10245294241275103)
+<p>Analyses the capacity of Eurozone institutions to finance climate action through fiscal and monetary policy coordination.</p>
+<a href="https://doi.org/10.1177/10245294241275103" target="_blank" class="pub-link">Read paper →</a>
 </div>
 
 <div class="section-divider"></div>
@@ -64,11 +55,12 @@ My earlier research explored the so-called financialisation of social policy thr
 
 I hold a PhD in International Political Economy from **City, University of London**, and was previously an ESRC Postdoctoral Fellow at the **London School of Economics** and a Research Officer on the QUAD project at LSE's **Centre for Analysis of Risk and Regulation**. My research has been published in *Competition and Change*, *Environment and Planning A*, *Journal of European Integration*, *New Political Economy*, and other leading journals. I supervise doctoral research on climate finance, energy systems, and the geopolitics of finance.
 
-<div class="section-divider"></div>
+<div class="section-divider mobile-only"></div>
 
 ## Contact & Profiles
+{: .mobile-only}
 
-<div class="contact-profiles-links">
+<div class="contact-profiles-links mobile-only">
   <a href="mailto:ags77@bath.ac.uk" rel="nofollow noopener noreferrer" class="contact-email-link">
     <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> ags77@bath.ac.uk
   </a>
