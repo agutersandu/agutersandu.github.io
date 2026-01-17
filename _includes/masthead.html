@@ -1,26 +1,48 @@
 {% include base_path %}
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><span class="navicon"></span></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
-          </li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+
+<!-- Mobile Header -->
+<header class="masthead-mobile">
+  <div class="masthead-mobile__brand">AGS</div>
+  <button class="masthead-mobile__toggle" aria-expanded="false" aria-controls="mobile-drawer">
+    ☰
+  </button>
+</header>
+
+<!-- Mobile Drawer -->
+<nav id="mobile-drawer" class="mobile-drawer">
+  <a href="{{ '/' | relative_url }}">About</a>
+  <a href="{{ '/research/' | relative_url }}">Research</a>
+  <a href="{{ '/publications/' | relative_url }}">Publications</a>
+  <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
+  <a href="{{ '/talks/' | relative_url }}">Talks</a>
+</nav>
+<div class="mobile-backdrop"></div>
+
+<!-- Desktop Masthead (original) -->
+<div class="masthead-desktop">
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button><span class="navicon"></span></button>
+          <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
+              <a href="{{ base_path }}/">{{ site.title }}</a>
             </li>
-          {% endfor %}
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
+            {% for link in site.data.navigation.main %}
+              {% if link.url contains 'http' %}
+                {% assign domain = '' %}
+              {% else %}
+                {% assign domain = base_path %}
+              {% endif %}
+              <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
+                <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+      </div>
     </div>
   </div>
 </div>
