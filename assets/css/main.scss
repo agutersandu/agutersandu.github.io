@@ -599,14 +599,11 @@ body {
   display: none !important;
 }
 
-/* Remove thin heading rules under section titles */
+/* Remove all automatic thin separators in page content;
+   keep only explicit .section-divider elements */
 .page .page__content h2,
-.page .page__content h3 {
-  border-top: none !important;
-  padding-top: 0 !important;
+.page .page__content h3,
+.page .page__content > * + * {
+  border-top: 0 !important;
 }
 
-/* Remove automatic thin separators between blocks */
-.page .page__content > * + * {
-  border-top: none !important;
-}
