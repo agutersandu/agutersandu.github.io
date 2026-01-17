@@ -599,9 +599,10 @@ body {
   display: none !important;
 }
 
-/* Remove default thin borders under section headings */
-.page__content h2,
-.page__content h3 {
-  border-top: none;
-  padding-top: 0;
+/* Remove thin heading rules under section titles */
+.page .page__content h2,
+.page .page__content h3 {
+  border-top: none !important;
+  padding-top: 0 !important;
 }
+
