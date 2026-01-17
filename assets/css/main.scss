@@ -592,29 +592,4 @@ body {
     margin-bottom: 30px;
   }
   
-  /* Mobile Hero Section - Option 4: Full-width Hero (simplified) */
-.mobile-hero {
-  display: none; /* Hidden by default (desktop) */
-}
-
-@media (max-width: 768px) {
-  .mobile-hero {
-    display: block;
-    text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    margin-bottom: 30px;
-  }
   
-  .mobile-hero__photo {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  .mobile-hero__name,
-  .mobile-hero__tagline {
-    display: none; /* Hidden as requested */
-  }
-}
