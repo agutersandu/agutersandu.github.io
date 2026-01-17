@@ -8,7 +8,7 @@ author_profile: false
 You can reach me via the channels below:
 
 <div class="contact-grid">
-  <div class="contact-card primary">
+  <div class="contact-card">
     <h3><i class="fas fa-envelope"></i> Email</h3>
     <p><a href="mailto:ags77@bath.ac.uk">ags77@bath.ac.uk</a></p>
   </div>
