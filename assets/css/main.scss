@@ -577,3 +577,41 @@ body {
 .mobile-nav-toggle {
   display: none !important;
 }
+
+/* Mobile Hero Section - Option 4: Full-width Hero */
+.mobile-hero {
+  display: none; /* Hidden by default (desktop) */
+}
+
+@media (max-width: 768px) {
+  .mobile-hero {
+    display: block;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin-bottom: 30px;
+  }
+  
+  .mobile-hero__photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .mobile-hero__name {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+  }
+  
+  .mobile-hero__tagline {
+    font-size: 16px;
+    color: #5a6c7d;
+    margin: 0;
+    font-style: italic;
+  }
+}
