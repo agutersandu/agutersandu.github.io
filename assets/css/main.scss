@@ -33,398 +33,407 @@
 
 /* Custom global styles - consistent text size across all pages */
 body {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .page__content p,
 .archive__item-excerpt {
-  font-size: 0.95em;
-  line-height: 1.6;
+    font-size: 0.95em;
+    line-height: 1.6;
 }
 
 /* Section dividers */
 .section-divider {
-  border-top: 1px solid #e0e0e0;
-  margin: 2rem 0 1.5rem 0;
+    border-top: 1px solid #e0e0e0;
+    margin: 2rem 0 1.5rem 0;
 }
 
 /* Project highlight box for About page */
 .project-highlight {
-  border-left: 4px solid #007bff;
-  padding: 1rem 1rem 1rem 1.5rem;
-  margin: 1.5rem 0;
-  background: #f8f9fa;
-  font-size: 0.95em;
-  line-height: 1.6;
+    border-left: 4px solid #007bff;
+    padding: 1rem 1rem 1rem 1.5rem;
+    margin: 1.5rem 0;
+    background: #f8f9fa;
+    font-size: 0.95em;
+    line-height: 1.6;
 }
 
 /* Institutional logos */
 .logos-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 2rem 0;
-  opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+    opacity: 0.7;
 }
 
 .logo-item {
-  flex: 0 1 auto;
-  text-align: center;
+    flex: 0 1 auto;
+    text-align: center;
 }
 
 .logo-item img {
-  max-height: 60px;
-  max-width: 180px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
+    max-height: 60px;
+    max-width: 180px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
 }
 
 .logo-item img:hover {
-  filter: grayscale(0%);
+    filter: grayscale(0%);
 }
 
 /* Course boxes for Teaching page */
 .course-box {
-  background: #f8f9fa;
-  border-left: 3px solid #007bff;
-  padding: 1.2rem 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 4px;
-  transition: box-shadow 0.2s ease;
+    background: #f8f9fa;
+    border-left: 3px solid #007bff;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    transition: box-shadow 0.2s ease;
 }
 
 .course-box:hover {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .course-box-past {
-  border-left-color: #6c757d;
-  background: #fafafa;
+    border-left-color: #6c757d;
+    background: #fafafa;
 }
 
 .course-box h4 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: #2c3e50;
-  font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-size: 1.1em;
 }
 
 .course-meta {
-  font-size: 0.85em;
-  color: #666;
-  font-style: italic;
-  margin-bottom: 0.8rem;
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.8rem;
 }
 
 /* Research project boxes - with consistent text size */
 .project-box {
-  background: #fff;
-  border-left: 3px solid #28a745;
-  padding: 1.2rem 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  transition: box-shadow 0.2s ease;
-  font-size: 0.95em;
+    background: #fff;
+    border-left: 3px solid #28a745;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s ease;
+    font-size: 0.95em;
 }
 
 .project-box:hover {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .project-box-featured {
-  border-left-color: #007bff;
-  border-left-width: 4px;
-  background: #f8f9fa;
-  font-size: 0.95em;
-  line-height: 1.6;
+    border-left-color: #007bff;
+    border-left-width: 4px;
+    background: #f8f9fa;
+    font-size: 0.95em;
+    line-height: 1.6;
 }
 
 .project-box h3,
 .project-box h4 {
-  margin-top: 0;
-  margin-bottom: 0.8rem;
-  color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    color: #2c3e50;
 }
 
 .project-box h3 {
-  font-size: 1.3em;
+    font-size: 1.3em;
 }
 
 .project-box h4 {
-  font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 .project-box p {
-  font-size: 1em;
-  line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.6;
 }
 
 /* Research theme boxes - with consistent text size */
 .theme-box {
-  background: #f0f7ff;
-  border-left: 3px solid #17a2b8;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1.2rem;
-  border-radius: 4px;
-  font-size: 0.95em;
+    background: #f0f7ff;
+    border-left: 3px solid #17a2b8;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.2rem;
+    border-radius: 4px;
+    font-size: 0.95em;
 }
 
 .theme-box h4 {
-  margin-top: 0;
-  margin-bottom: 0.6rem;
-  color: #1a5490;
-  font-size: 1.05em;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    color: #1a5490;
+    font-size: 1.05em;
 }
 
 .theme-box p {
-  font-size: 1em;
-  line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.6;
 }
 
 /* Publication cards for Featured Publications */
 .pub-card {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-  color: white;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .pub-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
 .pub-card h4 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: white;
-  font-size: 1.15em;
-  font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-size: 1.15em;
+    font-weight: 600;
 }
 
 .pub-card p {
-  font-size: 0.95em;
-  line-height: 1.6;
-  margin-bottom: 0.8rem;
-  color: rgba(255,255,255,0.95);
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    color: rgba(255,255,255,0.95);
 }
 
 .pub-meta {
-  font-size: 0.85em !important;
-  color: rgba(255,255,255,0.8) !important;
-  font-style: italic;
-  margin-bottom: 0.8rem !important;
+    font-size: 0.85em !important;
+    color: rgba(255,255,255,0.8) !important;
+    font-style: italic;
+    margin-bottom: 0.8rem !important;
 }
 
 .pub-link {
-  display: inline-block;
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 2px solid white;
-  padding-bottom: 2px;
-  transition: opacity 0.2s ease;
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+    transition: opacity 0.2s ease;
 }
 
 .pub-link:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 /* Enhanced Navigation Bar - Fixed Version */
-
 /* Hide the empty title link that's creating the weird box */
 .masthead__menu-item--lg {
-  display: none !important;
+    display: none !important;
 }
 
 /* Clean navigation with subtle background */
 .masthead {
-  background: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 
 /* Increase padding for breathing room */
 .masthead__inner-wrap {
-  padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem;
 }
 
 /* Better spacing and weight for menu items */
 .masthead__menu-item {
-  margin: 0 0.3rem;
-  font-weight: 500;
+    margin: 0 0.3rem;
+    font-weight: 500;
 }
 
 /* Add padding, rounded corners, and smooth transitions */
 .masthead__menu-item a {
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  color: #4a4a4a;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    color: #4a4a4a;
 }
 
 /* Hover state with subtle background and accent color */
 .masthead__menu-item a:hover {
-  background: #f8f8f8;
-  color: #007bff;
+    background: #f8f8f8;
+    color: #007bff;
 }
 
 /* Selected/active page styling */
 .masthead__menu-item.selected a {
-  color: #2c3e50;
-  background: #f5f5f5;
-  border-bottom: 2px solid #2c3e50;
+    color: #2c3e50;
+    background: #f5f5f5;
+    border-bottom: 2px solid #2c3e50;
 }
 
 /* Add visual separation in sidebar between contact info and academic profiles */
 .sidebar .author__urls li a[href^="mailto"] {
-  margin-bottom: 0.8rem;
-  padding-bottom: 0.8rem;
-  border-bottom: 1px solid #e8e8e8;
-  display: block;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #e8e8e8;
+    display: block;
 }
 
-
 /* Mobile Navigation Styles */
-.masthead-mobile,
+.masthead-mobile, 
 .mobile-drawer,
 .mobile-backdrop {
-  display: none;
+    display: none;
 }
 
 @media (max-width: 768px) {
-  /* Hide desktop masthead on mobile */
-  .masthead-desktop {
-    display: none;
-  }
+    /* Hide desktop masthead on mobile */
+    .masthead-desktop {
+        display: none;
+    }
 
-  /* Mobile header bar */
-  .masthead-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 1rem;
-    background: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+    /* Mobile header bar */
+    .masthead-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        background: #ffffff;
+        border-bottom: 1px solid #e5e5e5;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
 
-  .masthead-mobile__brand {
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: #2c3e50;
-  }
+    .masthead-mobile__brand {
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: #2c3e50;
+    }
 
-  .masthead-mobile__toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    line-height: 1;
-    padding: 0.25rem;
-    cursor: pointer;
-    color: #2c3e50;
-  }
+    .masthead-mobile__toggle {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        line-height: 1;
+        padding: 0.25rem;
+        cursor: pointer;
+        color: #2c3e50;
+    }
 
-  /* Mobile drawer menu */
-  .mobile-drawer {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 75%;
-    max-width: 280px;
-    height: 100vh;
-    background: #ffffff;
-    padding: 4rem 1.5rem 2rem;
-    transform: translateX(100%);
-    transition: transform 0.25s ease-out;
-    z-index: 1001;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-  }
+    /* Mobile drawer menu */
+    .mobile-drawer {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 75%;
+        max-width: 280px;
+        height: 100vh;
+        background: #ffffff;
+        padding: 4rem 1.5rem 2rem;
+        transform: translateX(100%);
+        transition: transform 0.25s ease-out;
+        z-index: 1001;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    }
 
-  .mobile-drawer a {
-    display: block;
-    margin-bottom: 1rem;
-    padding: 0.75rem 0;
-    color: #2c3e50;
-    text-decoration: none;
-    font-weight: 500;
-    border-bottom: 1px solid #f0f0f0;
-  }
+    .mobile-drawer a {
+        display: block;
+        margin-bottom: 1rem;
+        padding: 0.75rem 0;
+        color: #2c3e50;
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px solid #f0f0f0;
+    }
 
-  .mobile-drawer a:hover {
-    color: #007bff;
-  }
+    .mobile-drawer a:hover {
+        color: #007bff;
+    }
 
-  .mobile-drawer.open {
-    transform: translateX(0);
-  }
+    .mobile-drawer.open {
+        transform: translateX(0);
+    }
 
-  /* Backdrop overlay */
-  .mobile-backdrop {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.25);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease-out;
-    z-index: 1000;
-  }
+    /* Backdrop overlay */
+    .mobile-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease-out;
+        z-index: 1000;
+    }
 
-  .mobile-backdrop.open {
-    opacity: 1;
-    pointer-events: auto;
-  }
+    .mobile-backdrop.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
 }
 
 /* Mobile Hero Portrait Styles */
 .about-hero {
-  display: none;
+    display: none;
 }
 
 @media (max-width: 768px) {
-  .about-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 2rem 0 1.5rem;
-  }
+    .about-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 2rem 0 1.5rem;
+    }
 
-  .about-hero img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
+    .about-hero img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
 
-  .about-hero h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem;
-    color: #2c3e50;
-  }
+    .about-hero h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+        color: #2c3e50;
+    }
 
-  .about-hero p {
-    font-size: 0.95rem;
-    color: #666;
-    margin-bottom: 0;
-  }
+    .about-hero p {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 0;
+    }
 
-  /* Hide the existing sidebar author info on mobile */
-  .sidebar .author__avatar,
-  .sidebar .author__content,
-  .sidebar .author__name,
-  .sidebar .author__bio {
+    /* Hide the existing sidebar author info on mobile */
+    .sidebar .author__avatar,
+    .sidebar .author__content,
+    .sidebar .author__name,
+    .sidebar .author__bio {
+        display: none;
+    }
+}
+
+/* Mobile-Only Content (hide on desktop, show on mobile) */
+.mobile-only {
     display: none;
-  }
+}
+
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
 }
