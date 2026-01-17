@@ -10,11 +10,17 @@
 
 <!-- Mobile Drawer -->
 <nav id="mobile-drawer" class="mobile-drawer">
-  <a href="{{ '/' | relative_url }}">About</a>
-  <a href="{{ '/research/' | relative_url }}">Research</a>
-  <a href="{{ '/publications/' | relative_url }}">Publications</a>
-  <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
-  <a href="{{ '/talks/' | relative_url }}">Talks</a>
+  {% for link in site.data.navigation.main %}
+    {% if link.class == "nav-mobile-only" %}
+      {# show only Contact here #}
+      {% if link.url contains 'http' %}
+        {% assign domain = '' %}
+      {% else %}
+        {% assign domain = base_path %}
+      {% endif %}
+      <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+    {% endif %}
+  {% endfor %}
 </nav>
 <div class="mobile-backdrop"></div>
 
