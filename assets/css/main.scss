@@ -589,18 +589,7 @@ body {
   display: none !important;
 }
 
-/* Contact link only in mobile nav */
-.nav-mobile-only {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .nav-mobile-only {
-    display: inline-block;
-  }
-}
-
-/* Hide nav-mobile-only links in desktop header */
+/* Hide Contact (nav-mobile-only) only in the desktop header */
 .masthead-desktop .nav-mobile-only {
   display: none;
 }
