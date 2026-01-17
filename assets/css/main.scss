@@ -599,3 +599,8 @@ body {
     display: inline-block;
   }
 }
+
+/* Hide nav-mobile-only links in desktop header */
+.masthead-desktop .nav-mobile-only {
+  display: none;
+}
