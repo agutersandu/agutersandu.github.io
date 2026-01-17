@@ -11,15 +11,12 @@
 <!-- Mobile Drawer -->
 <nav id="mobile-drawer" class="mobile-drawer">
   {% for link in site.data.navigation.main %}
-    {% if link.class == "nav-mobile-only" %}
-      {# show only Contact here #}
-      {% if link.url contains 'http' %}
-        {% assign domain = '' %}
-      {% else %}
-        {% assign domain = base_path %}
-      {% endif %}
-      <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+    {% if link.url contains 'http' %}
+      {% assign domain = '' %}
+    {% else %}
+      {% assign domain = base_path %}
     {% endif %}
+    <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
   {% endfor %}
 </nav>
 <div class="mobile-backdrop"></div>
