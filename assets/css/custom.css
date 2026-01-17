@@ -482,10 +482,11 @@
 
 .mobile-photo-center {
   text-align: center;
-  margin: 1.5rem 0 1rem;
+  margin: 1.5rem 0 2.25rem;  /* ↑ increased bottom margin */
 }
+
 .mobile-photo-center img {
-  max-width: 70%;
+  max-width: 45%;
   height: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
