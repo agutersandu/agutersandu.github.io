@@ -8,21 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-<div class="mobile-hero">
-  <img src="{{ site.author.avatar | prepend: '/images/' | prepend: base_path }}" alt="{{ site.author.name }}" class="mobile-hero__photo">
-  <h1 class="mobile-hero__name">{{ site.author.name }}</h1>
-  <p class="mobile-hero__tagline">{{ site.author.bio }}</p>
-</div>
-
 I'm an Assistant Professor of International Political Economy at the **University of Bath** and a Senior Researcher at the **Global Climate Forum** in Berlin. My research examines how states mobilise financial resources to pursue ambitious objectives—from war and reconstruction to energy transitions and climate action—particularly when these goals appear fiscally or politically unaffordable under conventional budget constraints.
 
 <div class="section-divider"></div>
 
 ## Current Research
 
-<div class="project-highlight">
+{: .project-highlight}
 I lead **FINTRANS-UK**, an ESRC-funded research project investigating the hidden mechanics of how Britain has repeatedly funded the seemingly unaffordable across history. Drawing on archival research, longitudinal and administrative data, and semi-structured interviews, the project traces how the UK has engaged in public finance innovation to circumvent fiscal constraints and mobilise private capital for public purposes—from the _Exchange Equalisation Account_'s role as a wartime off‑balance‑sheet fiscal agency, through the extraordinary public investment that built the post‑war electricity system, and specialist vehicles such as the _Industrial and Commercial Finance Corporation_ and _Finance Corporation for Industry_ that filled financing gaps for industry, to today's arm's‑length, market-shaping approach to financing the UK's Green Transition.
-</div>
 
 This historical work sits within a broader research agenda on the **political economy of energy transitions**, **the evolution of monetary and financial systems**, and **the changing nature of state capacity**. Together with colleagues at the Global Climate Forum, I investigate how states use off-balance-sheet fiscal agencies to reconfigure fiscal governance to finance large-scale transitions. Recent work develops a macro‑financial perspective on the Green Transition across different monetary architectures. It analyses green macro‑financial governance in the Eurozone and the United States, examining how various actors in the monetary and fiscal ecosystems interact to finance climate goals and reshape financial regulation. In the United Kingdom, it investigates how a distinct green macro‑financial regime has emerged that centres on the securitisation of electricity system costs—using instruments such as Contracts‑for‑Difference and other arm's‑length arrangements—to channel private capital into net‑zero infrastructure while restructuring who bears the risks and rewards of the Transition.
 
