@@ -606,3 +606,7 @@ body {
   padding-top: 0 !important;
 }
 
+/* Remove automatic thin separators between blocks */
+.page .page__content > * + * {
+  border-top: none !important;
+}
