@@ -480,3 +480,12 @@
   }
 }
 
+.mobile-photo-center {
+  text-align: center;
+  margin: 1.5rem 0 1rem;
+}
+.mobile-photo-center img {
+  max-width: 70%;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
