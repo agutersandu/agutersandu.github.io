@@ -593,3 +593,9 @@ body {
 .masthead-desktop .nav-mobile-only {
   display: none;
 }
+
+/* Force-hide Contact (nav-mobile-only) only in desktop header */
+.masthead-desktop ul.visible-links > li.nav-mobile-only {
+  display: none !important;
+}
+
