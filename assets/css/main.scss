@@ -437,3 +437,58 @@ body {
         display: block;
     }
 }
+
+/* ========================================================================
+   MOBILE NAVIGATION - Hamburger Menu & Side Drawer
+   ======================================================================== */
+
+/* Hide mobile menu on desktop */
+.mobile-nav-toggle,
+.mobile-nav-overlay,
+.mobile-nav-drawer {
+  display: none;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  /* Hide desktop navigation on mobile */
+  .greedy-nav .visible-links {
+    display: none !important;
+  }
+  
+  .greedy-nav .hidden-links {
+    display: none !important;
+  }
+  
+  /* Hamburger Menu Button */
+  .mobile-nav-toggle { ... }
+  .mobile-nav-toggle span { ... }
+  .mobile-nav-toggle.active span:nth-child(1) { ... }
+  .mobile-nav-toggle.active span:nth-child(2) { ... }
+  .mobile-nav-toggle.active span:nth-child(3) { ... }
+  
+  /* Overlay */
+  .mobile-nav-overlay { ... }
+  .mobile-nav-overlay.active { ... }
+  
+  /* Side Drawer */
+  .mobile-nav-drawer { ... }
+  .mobile-nav-drawer.active { ... }
+  
+  /* Drawer Navigation Links */
+  .mobile-nav-drawer nav { ... }
+  .mobile-nav-drawer nav ul { ... }
+  .mobile-nav-drawer nav li { ... }
+  .mobile-nav-drawer nav a { ... }
+  .mobile-nav-drawer nav a:hover { ... }
+}
+
+/* Hide desktop hamburger on mobile */ 
+@media (max-width: 768px) { 
+  .greedy-nav button, .greedy-nav .navicon { display: none !important; } 
+}
+
+/* Hide our new mobile toggle that's showing at top */
+.mobile-nav-toggle {
+  display: none !important;
+}
