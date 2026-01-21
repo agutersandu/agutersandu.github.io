@@ -19,6 +19,8 @@ main:
     url: /teaching/
   - title: "Talks"
     url: /talks/
+     - title: "Projects"
+      url: /projects/
   - title: "Contact"
     url: /contact/
     class: "nav-mobile-only"
