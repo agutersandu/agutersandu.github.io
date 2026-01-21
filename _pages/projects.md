@@ -12,7 +12,7 @@ Sometimes I like to develop web-based visualisation of my research.
 <div class="project-card">
   <div class="project-header">
     <h3>Low-Carbon Levy Burden Explorer</h3>
-    <span class="project-status">Interactive Tool</span>
+    <a href="/projects/levy-burden-explorer/" class="btn btn--primary">Try the Interactive Tool</a>
   </div>
   
   <div class="project-content">
@@ -45,9 +45,7 @@ Sometimes I like to develop web-based visualisation of my research.
     </div>
     
     <p><strong>Understanding these alternatives helps us ask:</strong> What other ways might we fund the Green Transition, and would they distribute the burden more fairly?</p>
-    
-    <p><a href="/projects/levy-burden-explorer/" class="btn btn--primary">Explore the Interactive Tool</a></p>
-    
+        
     <p><strong>Related Research:</strong> See my working paper <a href="/publications/">"Securitising System Costs: The United Kingdom's Arm's-Length Derisking Regime for the Green Transition"</a> (2025) for a deeper analysis of how system costs are distributed across different national contexts.</p>
   </div>
 </div>
@@ -96,6 +94,7 @@ Sometimes I like to develop web-based visualisation of my research.
 .financing-method h4 {
   margin-top: 0;
   color: #333;
+    font-size: 1.1rem;
 }
 
 .btn {
