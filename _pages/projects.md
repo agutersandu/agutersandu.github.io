@@ -46,7 +46,7 @@ Sometimes I like to develop web-based visualisation of my research.
     
     <p><strong>Understanding these alternatives helps us ask:</strong> What other ways might we fund the Green Transition, and would they distribute the burden more fairly?</p>
         
-    <p><strong>Related Research:</strong> See my working paper <a href="/publications/">"Securitising System Costs: The United Kingdom's Arm's-Length Derisking Regime for the Green Transition"</a> (2025) for a deeper analysis of how system costs are distributed across different national contexts.</p>
+    <p><strong>Related Research:</strong> See my working paper <a href="/publications/">"Securitising System Costs: The United Kingdom's Arm's-Length Derisking Regime for the Green Transition"</a> (2025) for a deeper analysis of how the UK chose to pay for decarbonisation.</p>
   </div>
 </div>
 
