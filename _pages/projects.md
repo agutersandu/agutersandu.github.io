@@ -7,7 +7,7 @@ author_profile: true
 
 ## Research Projects
 
-I develop interactive tools and research to explore how different countries finance their green energy transitions, and who bears the costs.
+Sometimes I like to develop web-based visualisation of my research.
 
 <div class="project-card">
   <div class="project-header">
@@ -18,11 +18,9 @@ I develop interactive tools and research to explore how different countries fina
   <div class="project-content">
     <p><strong>About This Project</strong></p>
     
-    <p>This interactive tool explores how the United Kingdom chose to finance its green energy transition—and how different that choice looks compared to other countries. It draws on research presented in my paper on securitising system costs, which examines how the UK has placed the costs of decarbonisation on electricity bill payers and network charges.</p>
+    <p>This interactive tool explores how the United Kingdom chose to finance its Green Transition—and how different that choice looks compared to other countries. It draws on my recent research, linked below. Although all countries need to fund their transitions, they have made fundamentally different choices about where in the economy those costs are placed. Rather than consumers' bills, other countries channel these costs through different routes. This tool visualises how the UK's choice—placing costs on energy bills—affects households at different income levels.</p>
     
-    <p>Although all countries need to fund their green transitions, they have made fundamentally different choices about where in the economy those costs are placed. Rather than consumers' energy bills, other countries channel these costs through different routes. This tool visualises how the UK's choice—placing costs on energy bills—affects households at different income levels.</p>
-    
-    <p><em><strong>Important note:</strong> This is not an argument against green energy transitions (which are essential) or in favour of fossil fuels. Rather, it shows that how we pay for energy infrastructure—whether fossil fuel or renewable—is a policy choice. Electricity infrastructure of any kind must be financed somehow; the question is not whether to pay for it, but where those costs are placed in the economy and who bears them. Examining alternative financing mechanisms can help us think about fairer ways to distribute these costs.</em></p>
+    <p><em><strong>Important note:</strong> This is not an argument against the Green Transition (which is essential) or in favour of fossil fuels. Rather, it shows that how we pay for energy infrastructure—whether fossil fuel or renewable—is a policy choice. Electricity infrastructure of any kind must be financed somehow; the question is not whether to pay for it, but where those costs are placed in the economy and who bears them. Examining alternative financing mechanisms can help us think about fairer ways to distribute these costs. Finally, the data needed for the tool is not easy to find or construct, there are conflicting sources and gaps, so please take everything with a grain a salt-the numbers are illustrative rather than accurate. The argument, however, stands.</em></p>
     
     <p><strong>How Different Countries Place Transition Costs:</strong></p>
     
@@ -42,11 +40,11 @@ I develop interactive tools and research to explore how different countries fina
     </div>
     
     <div class="financing-method">
-      <h4>🇧🇷 Brazil: Blended Finance</h4>
-      <p>Brazil uses blended finance structures where public money is designed to catalyse much larger volumes of private investment. Under initiatives such as Eco Invest, the Treasury provides capital to financial institutions at low cost (reported around 1% interest), with explicit leverage objectives (at least 4:1), and early results reported at higher mobilisation levels. In parallel, Brazil's electricity market structure can split cost allocation across segments: large consumers in the free contracting environment (ACL) can procure renewable electricity through bilateral power purchase agreements (PPAs), rather than solely through regulated, system-wide cost recovery.</p>
+      <h4>🇮🇩 Indonesia: State Budget Subsidies and Utility Compensation</h4>
+      <p>Indonesia often manages electricity affordability by constraining retail tariffs, so household bills do not always reflect the full underlying cost of supply. When regulated tariffs fall below supply costs, the government can provide electricity subsidies and compensation payments to the state-owned utility PLN to cover part of the gap. In other words, the typical funding flow is: <strong>taxpayers → state budget → subsidies/compensation to PLN → system costs</strong>, rather than consumers' bills recovering system-wide costs.</p>
     </div>
     
-    <p><strong>Understanding these alternatives helps us ask:</strong> What other ways might we fund the green transition, and would they distribute the burden more fairly?</p>
+    <p><strong>Understanding these alternatives helps us ask:</strong> What other ways might we fund the Green Transition, and would they distribute the burden more fairly?</p>
     
     <p><a href="/projects/levy-burden-explorer/" class="btn btn--primary">Explore the Interactive Tool</a></p>
     
