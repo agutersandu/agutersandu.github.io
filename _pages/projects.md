@@ -1,7 +1,8 @@
 ---
 title: Projects
 permalink: /projects/
-layout: page
+layout: archive
+author_profile: true
 ---
 
 - [Low-Carbon Levy Burden Explorer](/projects/levy-burden-explorer/)
