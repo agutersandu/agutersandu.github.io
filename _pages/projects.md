@@ -7,7 +7,7 @@ author_profile: true
 
 - [Low-Carbon Levy Burden Explorer](/projects/levy-burden-explorer/)
 
-- ## Overview
+## Overview
 
 The transition to a low-carbon economy is essential in addressing climate change, yet the way countries choose to finance this transition varies significantly. The costs of transitioning energy systems are distributed differently across economies depending on the financing mechanisms they deploy. This project explores how different countries structure their green energy financing and what this reveals about the political economy of climate action.
 
