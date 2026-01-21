@@ -5,22 +5,21 @@
 # prevent it from being included in the site.
 #
 # NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
-
+#        Markdown formatted page while the second is generated using JSON.
 # main links
 main:
-  - title: "About"
-    url: /
-  - title: "Research"
-    url: /research/
-  - title: "Publications"
-    url: /publications/
-  - title: "Teaching"
-    url: /teaching/
-  - title: "Talks"
-    url: /talks/
-     - title: "Projects"
-      url: /projects/
-  - title: "Contact"
-    url: /contact/
-    class: "nav-mobile-only"
+ - title: "About"
+   url: /
+ - title: "Research"
+   url: /research/
+ - title: "Publications"
+   url: /publications/
+ - title: "Teaching"
+   url: /teaching/
+ - title: "Talks"
+   url: /talks/
+ - title: "Projects"
+   url: /projects/
+ - title: "Contact"
+   url: /contact/
+   class: "nav-mobile-only"
