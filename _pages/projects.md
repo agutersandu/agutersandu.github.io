@@ -94,7 +94,7 @@ Sometimes I like to develop web-based visualisation of my research.
 .financing-method h4 {
   margin-top: 0;
   color: #333;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .btn {
