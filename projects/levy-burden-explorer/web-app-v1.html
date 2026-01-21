@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low-Carbon Levy Burden Explorer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+
+    :root{
+        --bg0:#F7F9FE;
+        --bg1:#EEF3FF;
+
+        --card: rgba(255,255,255,0.92);
+        --card2: rgba(255,255,255,0.86);
+
+        --border: rgba(15,23,42,0.12);
+        --border2: rgba(15,23,42,0.08);
+
+        --text:#0B1220;
+        --muted: rgba(11,18,32,0.72);
+        --faint: rgba(11,18,32,0.55);
+
+        --accent:#2563EB;   /* blue */
+        --accent2:#7C3AED;  /* violet */
+        --danger:#DC2626;   /* red */
+        --warn:#D97706;     /* amber */
+        --good:#059669;
+
+        --shadow: 0 18px 44px rgba(15,23,42,0.12);
+        --shadow2: 0 10px 26px rgba(15,23,42,0.10);
+
+        --radius: 16px;
+        --radius2: 12px;
+
+        --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+        --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+        --focus: 0 0 0 4px rgba(37,99,235,.16);
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    html, body { height:100%; }
+
+    body{
+        font-family:var(--sans);
+        color:var(--text);
+        line-height:1.55;
+        padding: 22px 18px 46px;
+        background:
+            radial-gradient(900px 520px at 12% 0%, rgba(37,99,235,.10), transparent 56%),
+            radial-gradient(820px 520px at 92% 10%, rgba(124,58,237,.08), transparent 60%),
+            radial-gradient(900px 640px at 60% 110%, rgba(5,150,105,.07), transparent 58%),
+            linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 100%);
+        min-height:100vh;
+    }
+
+    /* subtle paper grain */
+    body:before{
+        content:"";
+        position:fixed; inset:0;
+        pointer-events:none;
+        background-image:
+            repeating-linear-gradient(0deg, rgba(15,23,42,.015) 0 1px, transparent 1px 3px),
+            repeating-linear-gradient(90deg, rgba(15,23,42,.010) 0 1px, transparent 1px 4px);
+        opacity:.35;
+        mix-blend-mode: multiply;
+    }
+
+    .container{
+        max-width: 1240px;
+        margin: 0 auto;
+        position:relative;
+    }
+
+    h1{
+        font-size: clamp(26px, 3.2vw, 38px);
+        letter-spacing:-0.02em;
+        font-weight: 780;
+        margin-bottom: 10px;
+    }
+
+    .subtitle{
+        font-size: 15.5px;
+        color: var(--muted);
+        margin-bottom: 18px;
+        max-width: 980px;
+    }
+
+    .controls{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        align-items:center;
+        margin: 18px 0 22px;
+        padding: 12px 12px;
+        border: 1px solid var(--border2);
+        border-radius: var(--radius);
+        background: rgba(255,255,255,.75);
+        box-shadow: var(--shadow2);
+        position: sticky;
+        top: 10px;
+        z-index: 5;
+        backdrop-filter: blur(10px);
+    }
+
+    .percentile-btn{
+        padding: 10px 14px;
+        border: 1px solid rgba(15,23,42,.14);
+        background: rgba(255,255,255,.85);
+        color: var(--text);
+        border-radius: 999px;
+        cursor:pointer;
+        font-size: 13.5px;
+        font-weight: 680;
+        transition: transform .05s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+        user-select:none;
+    }
+    .percentile-btn:hover{
+        border-color: rgba(37,99,235,.45);
+        background: rgba(37,99,235,.06);
+    }
+    .percentile-btn:active{ transform: translateY(1px); }
+    .percentile-btn:focus-visible{
+        outline:none;
+        box-shadow: var(--focus);
+        border-color: rgba(37,99,235,.70);
+    }
+    .percentile-btn.active{
+        background: linear-gradient(90deg, rgba(37,99,235,.14), rgba(124,58,237,.10));
+        border-color: rgba(37,99,235,.55);
+        box-shadow: 0 10px 22px rgba(37,99,235,.12);
+    }
+
+    .main-grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 18px;
+    }
+    @media (max-width: 1024px){
+        .main-grid{ grid-template-columns: 1fr; }
+        .controls{ position: static; }
+    }
+
+    .card{
+        border-radius: var(--radius);
+        padding: 22px;
+        background: linear-gradient(180deg, var(--card), var(--card2));
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+    }
+
+    .card h2{
+        font-size: 14px;
+        letter-spacing: .10em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 780;
+        margin-bottom: 16px;
+    }
+
+    #householdTitle{
+        font-size: 18px;
+        text-transform:none;
+        letter-spacing:-0.01em;
+        color: var(--text);
+        margin-bottom: 12px;
+    }
+
+    .household-description{
+        background: rgba(37,99,235,.04);
+        border: 1px solid rgba(15,23,42,.10);
+        border-left: 4px solid rgba(37,99,235,.70);
+        padding: 14px 14px;
+        border-radius: var(--radius2);
+        margin-bottom: 14px;
+        font-size: 13.5px;
+        color: var(--muted);
+    }
+
+    .metric{
+        display:flex;
+        justify-content:space-between;
+        align-items:baseline;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(15,23,42,.08);
+        gap: 14px;
+    }
+    .metric:last-child{ border-bottom:none; }
+
+    .metric-label{
+        color: var(--faint);
+        font-size: 13px;
+    }
+    .metric-value{
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--accent);
+        font-family: var(--mono);
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+    }
+
+    .levy-burden-section{
+        background: rgba(255,255,255,.70);
+        border: 1px solid rgba(15,23,42,.10);
+        padding: 16px;
+        border-radius: var(--radius2);
+        margin-top: 16px;
+    }
+    .levy-burden-section h3{
+        font-size: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 12px;
+    }
+
+    .burden-row{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(15,23,42,.08);
+        gap: 14px;
+    }
+    .burden-row:last-child{ border-bottom:none; }
+
+    .burden-label{
+        color: var(--muted);
+        font-size: 13px;
+    }
+    .burden-value{
+        font-size: 16px;
+        font-weight: 820;
+        font-family: var(--mono);
+        color: var(--accent);
+        white-space: nowrap;
+    }
+
+    .burden-row:last-child .burden-value{
+        color: var(--danger);
+    }
+
+    .heating-equivalent{
+        background: linear-gradient(180deg, rgba(217,119,6,.10), rgba(217,119,6,.04));
+        border: 1px solid rgba(217,119,6,.28);
+        padding: 16px;
+        border-radius: var(--radius2);
+        margin-top: 16px;
+        text-align:center;
+        display:none;
+        box-shadow: var(--shadow2);
+    }
+    .heating-equivalent.show{ display:block; }
+    .heating-equivalent h3{
+        color: rgba(217,119,6,.92);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .12em;
+        margin-bottom: 10px;
+    }
+    .heating-equivalent p{
+        font-size: 18px;
+        font-weight: 850;
+        color: rgba(145,64,14,.95);
+        letter-spacing: -0.01em;
+    }
+
+    .chart-container{
+        position:relative;
+        height: 400px;
+        margin-bottom: 16px;
+        padding: 10px 10px;
+        border-radius: var(--radius2);
+        border: 1px solid rgba(15,23,42,.10);
+        background: rgba(255,255,255,.70);
+    }
+
+    .annotation{
+        text-align:center;
+        margin-top: 10px;
+        padding: 12px 12px;
+        background: linear-gradient(90deg, rgba(220,38,38,.10), rgba(37,99,235,.08));
+        border: 1px solid rgba(15,23,42,.10);
+        border-radius: var(--radius2);
+        color: rgba(11,18,32,.86);
+        font-weight: 720;
+        font-size: 13.5px;
+    }
+
+    .full-width{ grid-column: 1 / -1; }
+
+    .comparison-section{
+        background: rgba(255,255,255,.70);
+        border: 1px solid rgba(15,23,42,.10);
+        padding: 18px;
+        border-radius: var(--radius2);
+        margin-top: 16px;
+    }
+    .comparison-section h3{
+        font-size: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: .12em;
+        margin-bottom: 14px;
+    }
+
+    .comparison-row{
+        display:grid;
+        grid-template-columns: 1.05fr 1.95fr;
+        gap: 14px;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(15,23,42,.08);
+        align-items:start;
+    }
+    .comparison-row:last-child{ border-bottom:none; }
+
+    .comparison-label{
+        color: var(--text);
+        font-size: 13.5px;
+        opacity: .92;
+    }
+
+    .comparison-values{
+        display:flex;
+        justify-content:space-between;
+        align-items:stretch;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .comparison-current, .comparison-fair{
+        flex: 1 1 220px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid rgba(15,23,42,.10);
+        background: rgba(255,255,255,.78);
+    }
+
+    .comparison-current{
+        border-left: 4px solid rgba(220,38,38,.75);
+        background: linear-gradient(180deg, rgba(220,38,38,.06), rgba(255,255,255,.78));
+    }
+    .comparison-fair{
+        border-left: 4px solid rgba(5,150,105,.72);
+        background: linear-gradient(180deg, rgba(5,150,105,.06), rgba(255,255,255,.78));
+    }
+
+    .comparison-current-label, .comparison-fair-label{
+        font-size: 11px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: .10em;
+        margin-bottom: 6px;
+    }
+    .comparison-current-value, .comparison-fair-value{
+        font-size: 16px;
+        font-weight: 860;
+        font-family: var(--mono);
+        color: var(--text);
+    }
+    .comparison-explanation{
+        font-size: 12.5px;
+        color: var(--muted);
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(15,23,42,.08);
+        grid-column: 1 / -1;
+    }
+
+    .collapsible-section{
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        margin-bottom: 14px;
+        overflow:hidden;
+        background: linear-gradient(180deg, rgba(255,255,255,.90), rgba(255,255,255,.82));
+        box-shadow: var(--shadow2);
+        backdrop-filter: blur(10px);
+    }
+
+    .collapsible-header{
+        padding: 16px 18px;
+        background: rgba(255,255,255,.74);
+        cursor:pointer;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        font-weight: 780;
+        color: var(--text);
+        transition: background .18s ease;
+        user-select:none;
+        border-bottom: 1px solid rgba(15,23,42,.08);
+    }
+
+    .collapsible-header:hover{
+        background: rgba(37,99,235,.06);
+    }
+
+    .collapsible-toggle{
+        font-size: 18px;
+        transition: transform .22s ease;
+        color: var(--accent);
+        line-height: 1;
+    }
+    .collapsible-toggle.active{ transform: rotate(180deg); }
+
+    .collapsible-content{
+        padding: 16px 18px 18px;
+        color: var(--muted);
+        line-height: 1.7;
+        display:none;
+        background: rgba(255,255,255,.78);
+    }
+    .collapsible-content.active{ display:block; }
+    .collapsible-content h3{
+        color: var(--text);
+        margin-bottom: 10px;
+        margin-top: 16px;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+    }
+    .collapsible-content h3:first-child{ margin-top: 0; }
+    .collapsible-content p{ margin-bottom: 12px; }
+    .collapsible-content ul{ margin-left: 18px; margin-bottom: 12px; }
+    .collapsible-content li{ margin-bottom: 8px; }
+
+    footer{
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(15,23,42,.10);
+        text-align:center;
+        color: rgba(11,18,32,.55);
+        font-size: 12px;
+    }
+
+    .card p{ color: var(--muted); }
+
+    ::selection{ background: rgba(37,99,235,.18); color: var(--text); }
+    *::-webkit-scrollbar{ height:10px; width:10px; }
+    *::-webkit-scrollbar-thumb{ background: rgba(15,23,42,.16); border-radius: 999px; }
+    *::-webkit-scrollbar-track{ background: rgba(15,23,42,.04); }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Low-Carbon Levy Burden Explorer</h1>
+        <p class="subtitle">How energy transition costs burden different income groups</p>
+
+        <div class="controls">
+            <button class="percentile-btn active" data-percentile="10">10th Percentile (Poor)</button>
+            <button class="percentile-btn" data-percentile="25">25th Percentile (Working-class)</button>
+            <button class="percentile-btn" data-percentile="50">50th Percentile (Typical)</button>
+            <button class="percentile-btn" data-percentile="75">75th Percentile (Comfortable)</button>
+            <button class="percentile-btn" data-percentile="90">90th Percentile (Affluent)</button>
+        </div>
+
+        <div class="main-grid">
+            <!-- Household Dashboard -->
+            <div class="card">
+                <h2 id="householdTitle">10th Percentile (Poor)</h2>
+
+                <div class="household-description" id="householdDesc">
+                    Single adult or lone parent; very low work intensity; renting; small flat (1-2 rooms); minimal heating infrastructure; fuel poverty risk.
+                </div>
+
+                <div class="metric">
+                    <span class="metric-label">Net Income Before Housing</span>
+                    <span class="metric-value" id="incomeBefore">£11,000/yr</span>
+                </div>
+
+                <div class="metric">
+                    <span class="metric-label">Net Income After Housing</span>
+                    <span class="metric-value" id="incomeAfter">£5,500/yr</span>
+                </div>
+
+                <div class="metric">
+                    <span class="metric-label">Annual Electricity Use</span>
+                    <span class="metric-value" id="electricity">2,400 kWh</span>
+                </div>
+
+                <div class="metric">
+                    <span class="metric-label">Annual Energy Bill</span>
+                    <span class="metric-value" id="energyBill">£1,450</span>
+                </div>
+
+                <div class="metric">
+                    <span class="metric-label">Annual Low-Carbon Levies</span>
+                    <span class="metric-value" id="annualLevy">£42.57</span>
+                </div>
+
+                <div class="levy-burden-section">
+                    <h3>Levy Burden Metrics</h3>
+                    <div class="burden-row">
+                        <span class="burden-label">Levies as % of Energy Bill</span>
+                        <span class="burden-value" id="burdenBill">2.9%</span>
+                    </div>
+                    <div class="burden-row">
+                        <span class="burden-label">Levies as % of Income (Before Housing)</span>
+                        <span class="burden-value" id="burdenBefore">0.39%</span>
+                    </div>
+                    <div class="burden-row">
+                        <span class="burden-label">Levies as % of Income (After Housing)</span>
+                        <span class="burden-value" id="burdenAfter">0.77%</span>
+                    </div>
+                </div>
+
+                <div class="heating-equivalent" id="heatingBox">
+                    <h3>Equivalent to</h3>
+                    <p id="heatingText">Heating one extra room for 6.1 weeks per year</p>
+                </div>
+            </div>
+
+            <!-- Regressivity Chart -->
+            <div class="card">
+                <h2>Levy Burden as % of Net Income After Housing Costs</h2>
+                <div class="chart-container">
+                    <canvas id="burdenChart"></canvas>
+                </div>
+                <div class="annotation">
+                    Richest households (90th) face only about one-fifth the burden of poorest (10th): 4.8× regressivity
+                </div>
+            </div>
+
+            <!-- Tax-Fair Distribution Comparison -->
+            <div class="card full-width">
+                <h2>If Levies Were Collected Using UK Income Tax Bands</h2>
+                <p style="margin-bottom: 20px; color: #c0c0c0;">
+                    Here we imagine funding the same total levy pot using a tiny income‑based charge that follows the UK tax bands: no charge on income below the personal allowance, a small charge on basic‑rate income, a higher charge on higher‑rate income, and the highest charge on additional‑rate income.
+                </p>
+
+                <div class="comparison-section">
+                    <h3>Current (Regressive) vs. Income Tax Banded (Progressive) Distribution</h3>
+
+                    <div class="comparison-row">
+                        <span class="comparison-label"><strong>10th Percentile</strong></span>
+                        <div class="comparison-values">
+                            <div class="comparison-current">
+                                <div class="comparison-current-label">Current Levy</div>
+                                <div class="comparison-current-value" id="comp10Current">£42.57</div>
+                            </div>
+                            <div class="comparison-fair">
+                                <div class="comparison-fair-label">Banded Levy</div>
+                                <div class="comparison-fair-value" id="comp10Fair">£0.00</div>
+                            </div>
+                        </div>
+                        <div class="comparison-explanation" id="comp10Explain">
+                            Would saves £42.57/year (100.0% less)
+                        </div>
+                    </div>
+
+                    <div class="comparison-row">
+                        <span class="comparison-label"><strong>25th Percentile</strong></span>
+                        <div class="comparison-values">
+                            <div class="comparison-current">
+                                <div class="comparison-current-label">Current Levy</div>
+                                <div class="comparison-current-value" id="comp25Current">£49.67</div>
+                            </div>
+                            <div class="comparison-fair">
+                                <div class="comparison-fair-label">Banded Levy</div>
+                                <div class="comparison-fair-value" id="comp25Fair">£13.06</div>
+                            </div>
+                        </div>
+                        <div class="comparison-explanation" id="comp25Explain">
+                            Would saves £36.61/year (73.7% less)
+                        </div>
+                    </div>
+
+                    <div class="comparison-row">
+                        <span class="comparison-label"><strong>50th Percentile</strong></span>
+                        <div class="comparison-values">
+                            <div class="comparison-current">
+                                <div class="comparison-current-label">Current Levy</div>
+                                <div class="comparison-current-value" id="comp50Current">£65.63</div>
+                            </div>
+                            <div class="comparison-fair">
+                                <div class="comparison-fair-label">Banded Levy</div>
+                                <div class="comparison-fair-value" id="comp50Fair">£49.13</div>
+                            </div>
+                        </div>
+                        <div class="comparison-explanation" id="comp50Explain">
+                            Would saves £16.50/year (25.1% less)
+                        </div>
+                    </div>
+
+                    <div class="comparison-row">
+                        <span class="comparison-label"><strong>75th Percentile</strong></span>
+                        <div class="comparison-values">
+                            <div class="comparison-current">
+                                <div class="comparison-current-label">Current Levy</div>
+                                <div class="comparison-current-value" id="comp75Current">£75.10</div>
+                            </div>
+                            <div class="comparison-fair">
+                                <div class="comparison-fair-label">Banded Levy</div>
+                                <div class="comparison-fair-value" id="comp75Fair">£101.38</div>
+                            </div>
+                        </div>
+                        <div class="comparison-explanation" id="comp75Explain">
+                            Would pays £26.28/year (35.0% more)
+                        </div>
+                    </div>
+
+                    <div class="comparison-row">
+                        <span class="comparison-label"><strong>90th Percentile</strong></span>
+                        <div class="comparison-values">
+                            <div class="comparison-current">
+                                <div class="comparison-current-label">Current Levy</div>
+                                <div class="comparison-current-value" id="comp90Current">£89.28</div>
+                            </div>
+                            <div class="comparison-fair">
+                                <div class="comparison-fair-label">Banded Levy</div>
+                                <div class="comparison-fair-value" id="comp90Fair">£209.59</div>
+                            </div>
+                        </div>
+                        <div class="comparison-explanation" id="comp90Explain">
+                            Would pays £120.31/year (134.8% more)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collapsible Sections -->
+        <div class="collapsible-section">
+            <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                <span>What are low-carbon levies? (CfD, Capacity Market, Nuclear RAB)</span>
+                <span class="collapsible-toggle">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <p>Low-carbon levies are statutory charges recovered through electricity bills to finance the UK's energy transition infrastructure. They comprise three main components:</p>
+
+                <h3>Contracts for Difference (CfD)</h3>
+                <p>Subsidies paid to renewable energy generators (wind, solar, nuclear) when wholesale electricity prices fall below strike prices. This ensures investor certainty and incentivises low-carbon investment. The levy covers the difference between the strike price and market price.</p>
+
+                <h3>Capacity Market</h3>
+                <p>Payments made to power plants (low-carbon or otherwise) that guarantee availability during peak demand periods. This maintains system reliability as traditional coal and gas capacity retires.</p>
+
+                <h3>Nuclear RAB (Regulated Asset Base)</h3>
+                <p>A financing mechanism for new nuclear plants (e.g., Hinkley Point C) where costs are recovered through bills over the lifetime of the asset. This shifts financing from up-front government spending to long-term bill recovery, reducing exchequer pressure.</p>
+
+                <p><strong>The political economy issue:</strong> These levies appear proportionate when shown as a share of electricity bills (~3%), but are deeply regressive when measured against true discretionary income—particularly for households that have already spent heavily on housing costs.</p>
+            </div>
+        </div>
+
+        <div class="collapsible-section">
+            <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                <span>Data sourcing and methodology</span>
+                <span class="collapsible-toggle">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <h3>Data Sources</h3>
+                <p><strong>Household income:</strong> Family Resources Survey (FRS) 2024, equivalised disposable income before and after housing costs (AHC). Income percentiles reflect actual UK household distribution.</p>
+
+                <h3>Energy Consumption & Bills</h3>
+                <p><strong>Electricity and gas consumption:</strong> Ofgem Typical Domestic Consumption Values (TDCV) adjusted to income deciles. The 10th percentile reflects "low-use" profile (fuel poverty mitigation); the 50th percentile matches Ofgem's canonical medium-use household.</p>
+                <p><strong>Energy prices:</strong> Q1 2025/26 Ofgem price cap applied to consumption volumes. Dual-fuel (electricity + gas) bills reflect current market rates.</p>
+
+                <h3>Low-Carbon Levies</h3>
+                <p><strong>Current levies:</strong> CfD, Capacity Market, and Nuclear RAB charges recovered per kilowatt-hour of consumption. Rates are current as of January 2026. Levies calculated as: (levy rate per kWh) × (electricity consumption in kWh).</p>
+
+                <h3>Household Typology</h3>
+                <p>Each percentile is stylised to match typical demographic and housing characteristics at that income level. Consumption patterns are consistent with energy poverty literature (e.g., under-heating in poorest households) and Ofgem regulatory benchmarks.</p>
+
+                <h3>Income Tax Banded Distribution</h3>
+                <p>The "banded levy" scenario applies the UK income tax band structure (2025/26) as a multiplier to a base levy rate. Income is exempt (0× multiplier) below the personal allowance (£12,570); taxed at 1× the base rate in the basic-rate band (£12,571–£50,270); at 2× in the higher-rate band (£50,271–£125,140); and 3× in the additional-rate band (£125,141+). The base rate is calibrated to yield the same total levy across all households (£373.15) as the current per-kWh system.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Data from: Family Resources Survey 2024 | Ofgem Typical Domestic Consumption Values | UK Energy Security Bill cost recovery data (Q1 2026)</p>
+        </footer>
+    </div>
+
+    <script>
+        // Hardcoded data from distributional_impact_table_final.md
+        const householdData = {
+            10: {
+                title: "10th Percentile (Poor)",
+                description: "Single adult or lone parent; very low work intensity; renting; small flat (1-2 rooms); minimal heating infrastructure; fuel poverty risk; strong incentive to under-heat to reduce bills; no discretionary energy use.",
+                incomeBefore: 11000,
+                incomeAfter: 5500,
+                electricity: 2400,
+                energyBill: 1450,
+                annualLevy: 42.57,
+                burdenBill: 2.9,
+                burdenBefore: 0.39,
+                burdenAfter: 0.77,
+                heatingWeeks: 6.1
+            },
+            25: {
+                title: "25th Percentile (Working-class)",
+                description: "Single full-time worker on National Living Wage or just above; low-wage sector (retail, hospitality, care work); renting or shared ownership in modest neighbourhood; small terraced or end-terrace house OR flat; basic heating setup; limited financial buffer for energy costs.",
+                incomeBefore: 18000,
+                incomeAfter: 10000,
+                electricity: 2800,
+                energyBill: 1630,
+                annualLevy: 49.67,
+                burdenBill: 3.0,
+                burdenBefore: 0.28,
+                burdenAfter: 0.50,
+                heatingWeeks: 7.1
+            },
+            50: {
+                title: "50th Percentile (Typical)",
+                description: "Couple or single-earner family with 1-2 children; one full-time earner (median wage ~£33k gross) + one part-time/intermittent earner or non-working partner; owner-occupying or mortgaged semi-detached house (2-3 bedrooms); mid-level insulation; typical heating patterns; typical household for policy baselines.",
+                incomeBefore: 33000,
+                incomeAfter: 24000,
+                electricity: 3700,
+                energyBill: 2030,
+                annualLevy: 65.63,
+                burdenBill: 3.2,
+                burdenBefore: 0.20,
+                burdenAfter: 0.27,
+                heatingWeeks: 9.4
+            },
+            75: {
+                title: "75th Percentile (Comfortable)",
+                description: "Dual-earner couple, both full-time professional or skilled employment; combined gross income ~£80,000-90,000; owner-occupied detached or large semi-detached house (3-4 bedrooms); good-to-excellent insulation; comfortable heating expectations; discretionary energy use (home office, entertainment systems, potential EV).",
+                incomeBefore: 52500,
+                incomeAfter: 40000,
+                electricity: 4234,
+                energyBill: 2400,
+                annualLevy: 75.10,
+                burdenBill: 3.1,
+                burdenBefore: 0.14,
+                burdenAfter: 0.19,
+                heatingWeeks: 10.7
+            },
+            90: {
+                title: "90th Percentile (Affluent)",
+                description: "High-earning household (professionals, managers, entrepreneurs); combined household income often £120,000+; owner-occupied large detached or semi-detached property (4+ bedrooms); rural or desirable urban location; modern heating (condensing boiler or heat pump); electric vehicle(s) likely; discretionary energy use substantial; potential for solar panels or battery storage.",
+                incomeBefore: 75000,
+                incomeAfter: 55000,
+                electricity: 5033,
+                energyBill: 2800,
+                annualLevy: 89.28,
+                burdenBill: 3.2,
+                burdenBefore: 0.12,
+                burdenAfter: 0.16,
+                heatingWeeks: 12.8
+            }
+        };
+
+        // Banded levy distribution (income tax structure)
+        const bandedDistribution = {
+            10: 0.00,
+            25: 13.06,
+            50: 49.13,
+            75: 101.38,
+            90: 209.59
+        };
+
+        let currentChart = null;
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            updateHousehold(10);
+            initChart();
+
+            // Add event listeners to buttons
+            document.querySelectorAll('.percentile-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const percentile = parseInt(e.target.dataset.percentile);
+                    document.querySelectorAll('.percentile-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    updateHousehold(percentile);
+                });
+            });
+        });
+
+        function updateHousehold(percentile) {
+            const data = householdData[percentile];
+
+            document.getElementById('householdTitle').textContent = data.title;
+            document.getElementById('householdDesc').textContent = data.description;
+            document.getElementById('incomeBefore').textContent = '£' + data.incomeBefore.toLocaleString();
+            document.getElementById('incomeAfter').textContent = '£' + data.incomeAfter.toLocaleString();
+            document.getElementById('electricity').textContent = data.electricity.toLocaleString() + ' kWh';
+            document.getElementById('energyBill').textContent = '£' + data.energyBill.toLocaleString();
+            document.getElementById('annualLevy').textContent = '£' + data.annualLevy.toFixed(2);
+
+            document.getElementById('burdenBill').textContent = data.burdenBill.toFixed(1) + '%';
+            document.getElementById('burdenBefore').textContent = data.burdenBefore.toFixed(2) + '%';
+            document.getElementById('burdenAfter').textContent = data.burdenAfter.toFixed(2) + '%';
+
+            // Show heating box only for 10th percentile
+            const heatingBox = document.getElementById('heatingBox');
+            if (percentile === 10) {
+                heatingBox.classList.add('show');
+                document.getElementById('heatingText').textContent = 'Heating one extra room for ' + data.heatingWeeks.toFixed(1) + ' weeks per year';
+            } else {
+                heatingBox.classList.remove('show');
+            }
+        }
+
+        function initChart() {
+            const ctx = document.getElementById('burdenChart').getContext('2d');
+
+            const burdenData = [0.77, 0.50, 0.27, 0.19, 0.16];
+            const percentiles = ['10th', '25th', '50th', '75th', '90th'];
+
+            currentChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: percentiles,
+                    datasets: [{
+                        label: 'Levy Burden (% of After-Housing Income)',
+                        data: burdenData,
+                        backgroundColor: [
+                            '#ef4444',  // 10th - red (most burdened)
+                            '#f97316',  // 25th - orange
+                            '#eab308',  // 50th - yellow
+                            '#84cc16',  // 75th - lime
+                            '#22c55e'   // 90th - green (least burdened)
+                        ],
+                        borderColor: 'transparent',
+                        borderRadius: 8,
+                        borderSkipped: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'x',
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            padding: 12,
+                            titleColor: '#ffffff',
+                            bodyColor: '#e0e0e0',
+                            displayColors: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y.toFixed(2) + '%';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 0.9,
+                            ticks: {
+                                color: '#a0a0a0',
+                                callback: function(value) {
+                                    return value.toFixed(2) + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.05)',
+                                drawBorder: false
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#a0a0a0'
+                            },
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function toggleCollapsible(header) {
+            const toggle = header.querySelector('.collapsible-toggle');
+            const content = header.nextElementSibling;
+
+            toggle.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
