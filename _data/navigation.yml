@@ -16,8 +16,8 @@ main:
    url: /publications/
  - title: "Teaching"
    url: /teaching/
- - title: "Talks"
-   url: /talks/
+ # - title: "Talks"
+ #  url: /talks/
  - title: "Projects"
    url: /projects/
  - title: "Contact"
