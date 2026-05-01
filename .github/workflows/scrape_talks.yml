@@ -5,33 +5,32 @@ on:
     paths:
       - 'talks/**'
       - '_talks/**'
-        rkflow_dispatch:
-    
+
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write           # This workflow pushes to the repository
+      contents: write      # This workflow pushes to the repository
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'   # Specify the Python version you need
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'  # Specify the Python version you need
 
-    - name: Install dependencies
-      run: |
-        pip install jupyter pandas requests beautifulsoup4 geopy  # Add other dependencies as needed
-        pip install getorg --upgrade
+      - name: Install dependencies
+        run: |
+          pip install jupyter pandas requests beautifulsoup4 geopY  # Add other dependencies as needed
+          pip install getorg --upgrade
 
-  
-
-    - name: Commit changes
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add .
-        git commit -m "Automated update of talk locations" || echo "No changes to commit"
-        git push
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Automated update of talk locations" || echo "No changes to commit"
+          git push
