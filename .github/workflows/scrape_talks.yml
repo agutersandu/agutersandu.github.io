@@ -5,8 +5,7 @@ on:
     paths:
       - 'talks/**'
       - '_talks/**'
-      - 'talkmap.ipynb'
-
+    
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,9 +25,7 @@ jobs:
         pip install jupyter pandas requests beautifulsoup4 geopy  # Add other dependencies as needed
         pip install getorg --upgrade
 
-    - name: Run Jupyter Notebook
-      run: |
-        jupyter nbconvert --to notebook --execute talkmap.ipynb --output talkmap_out.ipynb
+  
 
     - name: Commit changes
       run: |
