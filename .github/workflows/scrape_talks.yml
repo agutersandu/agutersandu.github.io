@@ -5,7 +5,7 @@ on:
     paths:
       - 'talks/**'
       - '_talks/**'
-        workflow_dispatch:
+        rkflow_dispatch:
     
 jobs:
   build:
