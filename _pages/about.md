@@ -12,7 +12,7 @@ redirect_from:
   <img src="{{ site.author.avatar | prepend: '/images/' | prepend: base_path }}" alt="{{ site.author.name }}">
 </div>
 
-I'm an Assistant Professor of International Political Economy at the **University of Bath** and a Senior Researcher at the **Global Climate Forum** in Berlin. My research examines how states mobilise financial resources to pursue ambitious objectives—from war and reconstruction to energy transitions and climate action—particularly when these goals appear fiscally or politically unaffordable under conventional budget constraints.
+I'm an Associate Professor of International Political Economy at the **University of Bath** and a Senior Researcher at the **Global Climate Forum** in Berlin. My research examines how states mobilise financial resources to pursue ambitious objectives—from war and reconstruction to energy transitions and climate action—particularly when these goals appear fiscally or politically unaffordable under conventional budget constraints.
 
 <div class="section-divider"></div>
 
