@@ -9,6 +9,8 @@ You can also find my articles on [my Google Scholar profile](https://scholar.goo
 
 ## Peer-Reviewed Articles
 
+Laudage, G., Haas, A., **Guter-Sandu, A.** and Murau, S. (2026) "State Finance Beyond the Core Budget: Off-Balance-Sheet Fiscal Agencies in Germany's Fiscal Ecosystem", *Journal of Law and Political Economy*, 6(1), <https://doi.org/10.5070/LP6.54288>
+
 Reimer, F., **Guter-Sandu, A.**, Hass, A., Murau, S. (2025) "Schrödinger's Off-Balance-Sheet Fiscal Agency: The Recovery and Resilience Facility and the Limits to Incremental Fiscal Integration in Europe", *Journal of European Integration*, <https://doi.org/10.1080/07036337.2025.2491618>
 
 **Guter-Sandu, A.**, Haas, A., Murau, S. (2024) "Green Macro-Financial Governance in the European Monetary Architecture: Assessing the Capacity to Finance the Net-Zero Transition", *Competition and Change* (special issue on Green Finance), <https://doi.org/10.1177/10245294241275103>
@@ -40,8 +42,6 @@ Haas, A., Gradinger, V., **Guter-Sandu, A.** and Murau, S. (2025) "Après le Dé
 Haas, A., **Guter-Sandu, A.**, McEvoy, O. and Murau, S. (2025) "All Quiet on the Fiscal Front? Off-Balance-Sheet Fiscal Agencies in the German War Economy, 1914-1918", *OBFA-TRANSFORM Working Paper No. 7-EN*, <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5378793>
 
 Haas, A., Reimer, F., **Guter-Sandu, A.** and Murau, S. (2024) "The Mefo Operation. A Macro-Financial Analysis of Camouflaged Sovereign Borrowing through Off-Balance-Sheet Fiscal Agencies, 1933-1945", *OBFA-TRANSFORM Working Paper No. 2-EN*, <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4929301>
-
-Laudage, G., Haas, A., **Guter-Sandu, A.** and Murau, S. (2024) "State Finance Beyond the Core Budget. Off-Balance-Sheet Fiscal Agencies in Germany's Fiscal Ecosystem", *OBFA-TRANSFORM Working Paper No. 1-EN*, <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4910502>
 
 <div class="section-divider"></div>
 
