@@ -28,10 +28,10 @@ This historical work sits within a broader research agenda on the **political ec
 ## Featured Publications
 
 <div class="pub-card">
-<h4>Securitising System Costs: The United Kingdom's Arm's-Length Derisking Regime for the Green Transition</h4>
-<p class="pub-meta">OBFA-TRANSFORM Working Paper No. 12-EN, 2025</p>
-<p>Examines Britain's system of levies, contracts, and payment obligations through which electricity system costs are securitised to finance the green transition.</p>
-<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5747102" target="_blank" class="pub-link">Read paper →</a>
+<h4>Off the Books, Onto the Bills: Levy-Backed Derisking and the UK's Green Transition</h4>
+<p class="pub-meta">Review of International Political Economy, 2026</p>
+<p>Examines how levy-backed derisking has shifted the financing of Britain's green transition off the public books and onto energy bills, reshaping who bears the costs, risks, and rewards of net-zero infrastructure.</p>
+<a href="https://doi.org/10.1080/09692290.2026.2695254" target="_blank" rel="noopener noreferrer" class="pub-link">Read paper →</a>
 </div>
 
 <div class="pub-card">
