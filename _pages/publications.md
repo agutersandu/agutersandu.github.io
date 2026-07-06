@@ -9,7 +9,9 @@ You can also find my articles on [my Google Scholar profile](https://scholar.goo
 
 ## Peer-Reviewed Articles
 
-Laudage, G., Haas, A., **Guter-Sandu, A.** and Murau, S. (2026) "State Finance Beyond the Core Budget: Off-Balance-Sheet Fiscal Agencies in Germany's Fiscal Ecosystem", *Journal of Law and Political Economy*, 6(1), <https://doi.org/10.5070/LP6.54288>
+**Guter-Sandu, A.** (2026) "Off the Books, Onto the Bills: Levy-Backed Derisking and the UK's Green Transition", *Review of International Political Economy*, <https://doi.org/10.1080/09692290.2026.2695254>
+
+Laudage, G., Haas, A., **Guter-Sandu, A.** and Murau, S. (2026) "State Finance Beyond the Core Budget: Off-Balance-Sheet Fiscal Agencies in Germany's Fiscal Ecosystem", *Journal of Law and Political Economy*, <https://doi.org/10.5070/LP6.54288>
 
 Reimer, F., **Guter-Sandu, A.**, Hass, A., Murau, S. (2025) "Schrödinger's Off-Balance-Sheet Fiscal Agency: The Recovery and Resilience Facility and the Limits to Incremental Fiscal Integration in Europe", *Journal of European Integration*, <https://doi.org/10.1080/07036337.2025.2491618>
 
@@ -28,8 +30,6 @@ Murau, S., Haas, A., **Guter-Sandu, A.** (2023) "Monetary Architecture and the G
 <div class="section-divider"></div>
 
 ## Working Papers
-
-**Guter-Sandu, A.** (2025) "Securitising System Costs: The United Kingdom's Arm's-Length Derisking Regime for the Green Transition", *OBFA-TRANSFORM Working Paper No. 12-EN*, <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5747102>
 
 McEvoy, O., Kapff, M., **Guter-Sandu, A.** and Murau, S. (2025) "Mind the MacMillan Gap: Off-Balance-Sheet Fiscal Agencies in Britain's Post-War Industrial Financing, 1945-1973", *OBFA-TRANSFORM Working Paper No. 10-EN*, <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5548960>
 
