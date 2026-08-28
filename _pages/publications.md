@@ -31,7 +31,7 @@ Murau, S., Haas, A., **Guter-Sandu, A.** (2023) "Monetary Architecture and the G
 
 ## Working Papers
 
-**Guter-Sandu, A.** (2026) "From Renewable Deployment to Energy Security: The Institutional Foundations of the Renewable Security Dividend", <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7348962>
+**Guter-Sandu, A.** (2026) "From Renewable Deployment to Energy Security: The Institutional Foundations of the Renewable Security Dividend", *OBFA-TRANSFORM Working Paper No. 17-EN*, <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7348962>
 
 Pocklington, J., Chaltiel, F., **Guter-Sandu, A.** and Murau, S. (2026) "Green Steel and the Saarland Transformation Fund. Financing Decarbonization through Off-Balance-Sheet Fiscal Agencies", *OBFA-TRANSFORM Working Paper No. 16-EN*, <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7329379>
 
