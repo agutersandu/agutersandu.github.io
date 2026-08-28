@@ -31,6 +31,12 @@ Murau, S., Haas, A., **Guter-Sandu, A.** (2023) "Monetary Architecture and the G
 
 ## Working Papers
 
+**Guter-Sandu, A.** (2026) "From Renewable Deployment to Energy Security: The Institutional Foundations of the Renewable Security Dividend", <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7348962>
+
+Pocklington, J., Chaltiel, F., **Guter-Sandu, A.** and Murau, S. (2026) "Green Steel and the Saarland Transformation Fund. Financing Decarbonization through Off-Balance-Sheet Fiscal Agencies", *OBFA-TRANSFORM Working Paper No. 16-EN*, <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7329379>
+
+Heckmann, L., Stichler, P., McEvoy, O., **Guter-Sandu, A.** and Murau, S. (2026) "The Workhorse of the Economic Miracle. The Kreditanstalt für Wiederaufbau in West German Reconstruction Finance, 1945-1958", *OBFA-TRANSFORM Working Paper No. 15-EN*, <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7193738>
+
 McEvoy, O., Kapff, M., **Guter-Sandu, A.** and Murau, S. (2025) "Mind the MacMillan Gap: Off-Balance-Sheet Fiscal Agencies in Britain's Post-War Industrial Financing, 1945-1973", *OBFA-TRANSFORM Working Paper No. 10-EN*, <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5548960>
 
 McEvoy, O., Chaltiel, F., **Guter-Sandu, A.** and Murau, S. (2025) "A Silent Revolution in the Suburbs: Off-Balance-Sheet Fiscal Agencies in U.S. Mortgage Finance, 1932-1981", *OBFA-TRANSFORM Working Paper No. 11-EN*, <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5550699>
