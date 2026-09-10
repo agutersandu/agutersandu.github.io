@@ -39,6 +39,11 @@ I lead **FINTRANS-UK**, an ESRC-funded research project that examines the politi
 
 </div>
 
+<div class="policy-note">
+  <strong>Policy engagement.</strong> In 2026, I provided expert evidence to the UK Parliament's POSTnote on <em>Supply chains for low-carbon electricity infrastructure</em>, drawing on my research on the financing of green supply chains and the development of durable productive capacity in the clean energy sector.
+  <a href="https://post.parliament.uk/research-briefings/post-pn-0782/" target="_blank" rel="noopener noreferrer">Read the POSTnote →</a>
+</div>
+
 <div class="section-divider"></div>
 
 ## Featured Publications
