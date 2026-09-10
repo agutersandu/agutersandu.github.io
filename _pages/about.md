@@ -12,7 +12,11 @@ redirect_from:
   <img src="{{ site.author.avatar | prepend: '/images/' | prepend: base_path }}" alt="{{ site.author.name }}">
 </div>
 
-I'm an Associate Professor of International Political Economy at the **University of Bath** and a Senior Researcher at the **Global Climate Forum** in Berlin. My research focuses on the political economy of the green transition, particularly how states reorganise energy systems, finance large-scale investment, and develop the productive capacities needed for decarbonisation. I am especially interested in energy policy, green industrial policy, energy security, and public finance. Much of my work examines how governments make low-carbon infrastructure investable, how the costs and risks of the transition are distributed, and how energy policy interacts with questions of industrial capacity, supply-chain resilience, and dependence on global production networks. More broadly, I am interested in how states build the institutional and financial capacity to undertake large-scale economic transformations, and in the political conflicts that emerge around who pays, who benefits, and what forms of productive capacity are created in the process.
+I'm an Associate Professor of International Political Economy at the **University of Bath** and a Senior Researcher at the **Global Climate Forum** in Berlin. My research focuses on the political economy of the green transition, particularly how states reorganise energy systems, finance large-scale investment, and develop the productive capacities needed for decarbonisation. 
+
+I am especially interested in energy policy, green industrial policy, energy security, and public finance. Much of my work examines how governments make low-carbon infrastructure investable, how the costs and risks of the transition are distributed, and how energy policy interacts with questions of industrial capacity, supply-chain resilience, and dependence on global production networks. 
+
+More broadly, I am interested in how states build the institutional and financial capacity to undertake large-scale economic transformations, and in the political conflicts that emerge around who pays, who benefits, and what forms of productive capacity are created in the process.
 
 <div class="section-divider"></div>
 
