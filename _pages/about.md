@@ -24,12 +24,16 @@ More broadly, I am interested in how states build the institutional and financia
 
 <div class="project-highlight" markdown="1">
 
-<div class="fintrans-logo-top">
-  <img src="/images/logos/esrc-logo.png" alt="Economic and Social Research Council">
-</div>
+<div style="display:flex; justify-content:space-between; align-items:flex-start; gap:2rem; margin-bottom:1rem;">
+  <div style="flex:1;">
+    <strong>FINTRANS-UK: Financing Large-Scale British Transformations</strong><br>
+    <em>ESRC New Investigator Grant · Project value: £335,000 · Sept 2025–Sept 2027</em>
+  </div>
 
-**FINTRANS-UK: Financing Large-Scale British Transformations**  
-*ESRC New Investigator Grant · Project value: £335,000 · Sept 2025–Sept 2027*
+  <img src="/images/logos/esrc-logo.png"
+       alt="Economic and Social Research Council"
+       style="display:block; width:175px; height:auto; flex:0 0 auto;">
+</div>
 
 I lead **FINTRANS-UK**, an ESRC-funded research project that examines the political economy of energy-system transformation in Britain, asking how successive governments have built the financial and institutional capacities required to reorganise the production, distribution, and consumption of energy. The project traces major episodes of transformation across modern British history, including the post-war nationalisation of electricity, the development of nuclear power, the conversion from coal-based town gas to natural gas, the exploitation of North Sea oil and gas, and the more recent transition towards a low-carbon electricity system. Across these episodes, I am interested in how changes in the energy system have been financed and governed: how investment is mobilised, how ownership and markets are reorganised, how risks and costs are distributed between the state, firms, and consumers, and how new productive and infrastructural capacities are created. The historical perspective helps explain why different institutional arrangements emerge at moments when governments seek to transform energy systems at scale.
 
