@@ -65,6 +65,8 @@ Nesvetailova, A. and **Guter-Sandu, A.** (2015) "The Good, the Bad, and the Frau
 
 ## Policy Reports and Others
 
+**Guter-Sandu, A.** (expert contributor), Tudball, M. and Dolak, M. (2026) "Supply chains for low carbon electricity infrastructure." *POSTnote 782, Parliamentary Office of Science and Technology, UK Parliament*. <https://doi.org/10.58248/PN782>
+
 **Guter-Sandu, A.**, Murau, S., Haas, A. (2024) "Monetary Architecture and the Green Transition. What Role for Central Banks?" *Just Money Symposium on Central Banks & the Climate Crisis*. <https://justmoney.org/monetary-architecture-green-transition-what-role-for-central-banks/>
 
 Haas, A., **Guter-Sandu, A.**, and Murau, S. (2023) "Horrorszenario für die Welt: Droht ein Zahlungsausfall der USA?". *Tagesspiegel* online and print, May 03, 2023. <https://www.tagesspiegel.de/internationales/horrorszenario-fur-die-welt-droht-ein-zahlungsausfall-der-usa-9749696.html>
