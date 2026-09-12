@@ -1,118 +1,201 @@
 ---
-title: Projects
+title: Data & Tools
 permalink: /projects/
 layout: archive
 author_profile: true
 ---
 
-## Research Projects
+Interactive companions to my research on energy transitions, public finance, and energy security.
 
-Sometimes I like to develop web-based visualisation of my research.
+<div class="tools-page">
+  <article class="tool-card tool-card--featured">
+    <div class="tool-card__copy">
+      <div class="tool-kicker">Evidence explorer</div>
+      <h2>Renewable Energy Security Explorer</h2>
+      <p>Explore what changed after wind or solar was actually deployed. Drawing on 25 empirical studies, the tool lets you filter findings by technology, scale, and outcome; examine cases across countries; and trace the path from deployment to changes in imports, affordability, reliability, and control.</p>
+      <p>The evidence shows that renewables can improve energy security, but the gains depend on grids, finance, maintenance, market design, industrial capacity, and supply chains. The explorer accompanies <em>From Renewable Deployment to Energy Security: The Institutional Foundations of the Renewable Security Dividend</em>.</p>
+    </div>
+    <div class="tool-actions">
+      <a href="/projects/renewable-energy-security-explorer/" class="tool-button tool-button--primary">Explore the evidence</a>
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7348962" class="tool-link" target="_blank" rel="noopener noreferrer">Read the paper &amp; methods →</a>
+    </div>
+  </article>
 
-<div class="project-card">
-  <div class="project-header">
-    <h3>Low-Carbon Levy Burden Explorer</h3>
-    <a href="/projects/levy-burden-explorer/" class="btn btn--primary">Try the Interactive Tool</a>
-  </div>
-  
-  <div class="project-content">
-    <p><strong>About This Project</strong></p>
-    
-    <p>This interactive tool explores how the United Kingdom chose to finance its Green Transition—and how different that choice looks compared to other countries. It draws on my recent research, linked below. Although all countries need to fund their transitions, they have made fundamentally different choices about where in the economy those costs are placed. Rather than consumers' bills, other countries channel these costs through different routes. This tool visualises how the UK's choice—placing costs on energy bills—affects households at different income levels.</p>
-    
-    <p><em><strong>Important note:</strong> This is not an argument against the Green Transition (which is essential) or in favour of fossil fuels. Rather, it shows that how we pay for energy infrastructure—whether fossil fuel or renewable—is a policy choice. Electricity infrastructure of any kind must be financed somehow; the question is not whether to pay for it, but where those costs are placed in the economy and who bears them. Examining alternative financing mechanisms can help us think about fairer ways to distribute these costs. Finally, the data needed for the tool is not easy to find or construct, there are conflicting sources and gaps, so please take everything with a grain a salt-the numbers are illustrative rather than accurate. The argument, however, stands.</em></p>
-    
-    <p><strong>How Different Countries Place Transition Costs:</strong></p>
-    
-    <div class="financing-method">
-      <h4>🇫🇷 France: State Budget Financing</h4>
-      <p>France largely finances renewable electricity support through the state budget, rather than relying on a dedicated renewables levy applied to electricity bills. In budget documentation citing the French energy regulator's CRE forecasts, the net cost to the state of renewable electricity support mechanisms is projected at approximately €7.7 billion in 2026. In other words, the funding flow is: <strong>taxpayers → state budget → renewable electricity support mechanisms</strong>, rather than consumers' electricity bills → renewable policy costs.</p>
+  <article class="tool-card tool-card--compact">
+    <div class="tool-card__copy">
+      <div class="tool-kicker">Distributional tool</div>
+      <h2>Low-Carbon Levy Burden Explorer</h2>
+      <p>This interactive tool shows how placing low-carbon policy costs on UK electricity bills affects households at different income levels, and compares that choice with alternative financing arrangements used elsewhere. The figures are illustrative; the tool is designed to make the distributional consequences of transition finance visible.</p>
     </div>
-    
-    <div class="financing-method">
-      <h4>🇩🇰 Denmark: Community Ownership</h4>
-      <p>Denmark reduces the extent to which transition costs are concentrated on all consumers by enabling—and in some cases requiring—local participation in project ownership. When the Middelgrunden offshore wind farm was built in 2000, around 8,500 citizens invested roughly €23 million to own 50% of the project, with reported returns in the region of 7% per year historically, and depending on performance. More broadly, since the 2009 Renewable Energy Act, developers of new wind projects must offer at least 20% ownership to local residents. This approach spreads costs and benefits across participating stakeholder-investors rather than allocating costs uniformly through all consumers' bills.</p>
+    <div class="tool-actions">
+      <a href="/projects/levy-burden-explorer/" class="tool-button">Open the tool</a>
+      <a href="/publications/" class="tool-link">Related research →</a>
     </div>
-    
-    <div class="financing-method">
-      <h4>🇨🇳 China: State-Directed Finance and Industrial Policy</h4>
-      <p>China's renewable expansion is strongly shaped by state-directed capital allocation, development finance, and industrial policy. State-owned enterprises remain central in the power sector—particularly in generation asset ownership and the grid—whilst private firms participate in renewables development and play a major role in manufacturing (especially in parts of the solar supply chain). The net effect is a transition financed and steered primarily through policy and state-influenced capital flows, with a mixed ecosystem of state and private actors operating within that framework.</p>
-    </div>
-    
-    <div class="financing-method">
-      <h4>🇮🇩 Indonesia: State Budget Subsidies and Utility Compensation</h4>
-      <p>Indonesia often manages electricity affordability by constraining retail tariffs, so household bills do not always reflect the full underlying cost of supply. When regulated tariffs fall below supply costs, the government can provide electricity subsidies and compensation payments to the state-owned utility PLN to cover part of the gap. In other words, the typical funding flow is: <strong>taxpayers → state budget → subsidies/compensation to PLN → system costs</strong>, rather than consumers' bills recovering system-wide costs.</p>
-    </div>
-    
-    <p><strong>Understanding these alternatives helps us ask:</strong> What other ways might we fund the Green Transition, and would they distribute the burden more fairly?</p>
-        
-    <p><strong>Related Research:</strong> See my working paper <a href="/publications/">"Securitising System Costs: The United Kingdom's Arm's-Length Derisking Regime for the Green Transition"</a> (2025) for a deeper analysis of how the UK chose to pay for decarbonisation.</p>
-  </div>
+  </article>
 </div>
 
 <style>
-.project-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+.tools-page {
+  --tools-ink: #252a27;
+  --tools-text: #555d58;
+  --tools-line: #dce2dc;
+  --tools-sage: #506658;
+  --tools-sage-dark: #43564a;
+  --tools-sage-soft: #eef3ef;
+  margin-top: 1.5rem;
+}
+
+.tool-card {
+  border: 1px solid var(--tools-line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(37, 52, 43, 0.07);
+}
+
+.tool-card--featured {
+  position: relative;
+  overflow: hidden;
   padding: 2rem;
-  margin-bottom: 2rem;
-  background-color: #fafafa;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background:
+    radial-gradient(circle at 92% 12%, rgba(201, 111, 74, 0.10), transparent 25%),
+    linear-gradient(135deg, #ffffff 0%, #f5f8f5 100%);
 }
 
-.project-header {
-  display: flex;
-  justify-content: space-between;
+.tool-card--featured::after {
+  content: "";
+  position: absolute;
+  right: -52px;
+  bottom: -72px;
+  width: 170px;
+  height: 170px;
+  border: 1px solid rgba(80, 102, 88, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.tool-card--compact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
   align-items: center;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 1rem;
+  margin-top: 1.15rem;
+  padding: 1.4rem 1.5rem;
+  background: #fbfbf9;
 }
 
-.project-header h3 {
-  margin: 0;
-  font-size: 1.5rem;
+.tool-card h2 {
+  margin: 0.2rem 0 0.75rem;
+  padding: 0;
+  border: 0;
+  color: var(--tools-ink);
+  font-size: 1.35rem;
+  line-height: 1.25;
 }
 
-.project-status {
-  background-color: #007bff;
-  color: white;
-  padding: 0.35rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
+.tool-card p {
+  max-width: 48rem;
+  margin: 0 0 0.75rem;
+  color: var(--tools-text);
+  font-size: 0.92rem;
+  line-height: 1.65;
 }
 
-.financing-method {
-  background-color: white;
-  border-left: 4px solid #007bff;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 4px;
+.tool-card p:last-child {
+  margin-bottom: 0;
 }
 
-.financing-method h4 {
+.tool-kicker {
+  color: var(--tools-sage-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.tool-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.3rem;
+}
+
+.tool-card--compact .tool-actions {
+  justify-content: flex-end;
   margin-top: 0;
-  color: #333;
-    font-size: 1rem;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+.tool-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.62rem 1rem;
+  border: 1px solid #cfd7d1;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--tools-sage-dark) !important;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(37, 52, 43, 0.06);
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 
-.btn--primary {
-  background-color: #007bff;
-  color: white;
+.tool-button--primary {
+  border-color: var(--tools-sage);
+  background: var(--tools-sage);
+  color: #fff !important;
 }
 
-.btn--primary:hover {
-  background-color: #0056b3;
+.tool-button:hover {
+  transform: translateY(-1px);
+  background: var(--tools-sage-soft);
+  box-shadow: 0 7px 16px rgba(37, 52, 43, 0.10);
+}
+
+.tool-button--primary:hover {
+  background: var(--tools-sage-dark);
+}
+
+.tool-link {
+  color: var(--tools-sage-dark) !important;
+  font-size: 0.84rem;
+  font-weight: 650;
+  text-decoration: none !important;
+}
+
+.tool-link:hover {
+  text-decoration: underline !important;
+}
+
+.tool-button:focus-visible,
+.tool-link:focus-visible {
+  outline: 3px solid rgba(80, 102, 88, 0.22);
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .tool-card--featured {
+    padding: 1.4rem;
+  }
+
+  .tool-card--compact {
+    display: block;
+  }
+
+  .tool-card--compact .tool-actions {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-button {
+    transition: none;
+  }
 }
 </style>
