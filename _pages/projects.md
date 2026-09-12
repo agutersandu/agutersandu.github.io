@@ -5,14 +5,14 @@ layout: archive
 author_profile: true
 ---
 
-<p class="tools-intro">Interactive companions to my research on energy transitions, public finance, and energy security.</p>
+<p class="tools-intro">I sometimes build interactive companions to my research—mostly because some findings make more sense when you can explore them for yourself.</p>
 
 <div class="tools-grid">
   <article class="tool-card">
     <div class="tool-card__content">
       <h2>Do Wind and Solar Improve Energy Security?</h2>
       <p>Wind and solar are often said to make countries more energy secure, but the real-world picture is more complicated. This tool brings together 25 studies published between 2015 and 2025 to show what happened after renewable projects were built—from household solar in Australia and Bangladesh to national power systems in China, Germany, and South Africa.</p>
-      <p>You can compare the evidence by technology, country, scale, and outcome. Across the studies, renewables often reduced fuel imports, electricity costs, or exposure to price shocks. The gains were strongest where grids, finance, maintenance, and local supply chains could support them. In some cases, dependence shifted from imported fuels to imported equipment, technology, or finance.</p>
+      <p>You can compare the evidence by technology, country, scale, and outcome. Across the studies, renewables often reduced reliance on imported fuels, lowered electricity costs or exposure to price shocks, expanded access to energy, and helped power systems meet demand. The gains were strongest where grids, finance, maintenance, and local supply chains could support them. In some cases, dependence shifted from imported fuels to imported equipment, technology, or finance.</p>
       <p class="paper-basis"><strong>Based on:</strong> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7348962" target="_blank" rel="noopener noreferrer"><em>From Renewable Deployment to Energy Security: The Institutional Foundations of the Renewable Security Dividend</em></a>.</p>
     </div>
     <div class="tool-actions">
