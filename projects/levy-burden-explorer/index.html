@@ -3,32 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Low-Carbon Levy Burden Explorer</title>
+    <title>Who Pays for the Energy Transition? — Andrei Guter-Sandu</title>
+    <meta name="description" content="Explore how the United Kingdom's choice to recover low-carbon policy costs through electricity bills distributes the burden across household income groups.">
+    <link rel="canonical" href="https://agutersandu.com/projects/levy-burden-explorer/">
+    <meta property="og:title" content="Who Pays for the Energy Transition?">
+    <meta property="og:description" content="Explore how low-carbon policy costs are distributed across UK household income groups and compare alternative ways of paying for the transition.">
+    <meta property="og:url" content="https://agutersandu.com/projects/levy-burden-explorer/">
+    <meta property="og:type" content="website">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <style>
 
     :root{
-        --bg0:#F7F9FE;
-        --bg1:#EEF3FF;
+        --bg0:#FFFFFF;
+        --bg1:#F3F6F3;
 
-        --card: rgba(255,255,255,0.92);
-        --card2: rgba(255,255,255,0.86);
+        --card: #FFFFFF;
+        --card2: #F9FAF8;
 
         --border: rgba(15,23,42,0.12);
         --border2: rgba(15,23,42,0.08);
 
-        --text:#0B1220;
-        --muted: rgba(11,18,32,0.72);
-        --faint: rgba(11,18,32,0.55);
+        --text:#202321;
+        --muted:#59615C;
+        --faint:#717873;
 
-        --accent:#2563EB;   /* blue */
-        --accent2:#7C3AED;  /* violet */
-        --danger:#DC2626;   /* red */
-        --warn:#D97706;     /* amber */
-        --good:#059669;
+        --accent:#506658;
+        --accent2:#C96F4A;
+        --danger:#A85F46;
+        --warn:#B77943;
+        --good:#5F765F;
 
-        --shadow: 0 18px 44px rgba(15,23,42,0.12);
-        --shadow2: 0 10px 26px rgba(15,23,42,0.10);
+        --shadow: 0 18px 44px rgba(37,52,43,0.10), 0 2px 8px rgba(37,52,43,0.04);
+        --shadow2: 0 8px 22px rgba(37,52,43,0.075), 0 1px 3px rgba(37,52,43,0.035);
 
         --radius: 16px;
         --radius2: 12px;
@@ -36,7 +42,7 @@
         --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
         --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-        --focus: 0 0 0 4px rgba(37,99,235,.16);
+        --focus: 0 0 0 4px rgba(80,102,88,.18);
     }
 
     *{ margin:0; padding:0; box-sizing:border-box; }
@@ -48,9 +54,8 @@
         line-height:1.55;
         padding: 22px 18px 46px;
         background:
-            radial-gradient(900px 520px at 12% 0%, rgba(37,99,235,.10), transparent 56%),
-            radial-gradient(820px 520px at 92% 10%, rgba(124,58,237,.08), transparent 60%),
-            radial-gradient(900px 640px at 60% 110%, rgba(5,150,105,.07), transparent 58%),
+            radial-gradient(900px 520px at 12% 0%, rgba(80,102,88,.09), transparent 56%),
+            radial-gradient(820px 520px at 92% 10%, rgba(201,111,74,.08), transparent 60%),
             linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 100%);
         min-height:100vh;
     }
@@ -87,6 +92,24 @@
         max-width: 980px;
     }
 
+    .context-note{
+        max-width: 1080px;
+        margin: 0 0 20px;
+        padding: 16px 18px;
+        border: 1px solid #E7D4C8;
+        border-left: 4px solid var(--accent2);
+        border-radius: var(--radius2);
+        background: #FBF4F0;
+        color: var(--muted);
+        box-shadow: var(--shadow2);
+        font-size: 13.5px;
+        line-height: 1.65;
+    }
+    .context-note p{ margin:0; }
+    .context-note p + p{ margin-top:8px; }
+    .context-note strong{ color:var(--text); }
+    .context-note a{ color:var(--accent);font-weight:700; }
+
     .controls{
         display:flex;
         flex-wrap:wrap;
@@ -96,18 +119,17 @@
         padding: 12px 12px;
         border: 1px solid var(--border2);
         border-radius: var(--radius);
-        background: rgba(255,255,255,.75);
+        background: rgba(255,255,255,.96);
         box-shadow: var(--shadow2);
         position: sticky;
         top: 10px;
         z-index: 5;
-        backdrop-filter: blur(10px);
     }
 
     .percentile-btn{
         padding: 10px 14px;
         border: 1px solid rgba(15,23,42,.14);
-        background: rgba(255,255,255,.85);
+        background: #FFFFFF;
         color: var(--text);
         border-radius: 999px;
         cursor:pointer;
@@ -117,19 +139,19 @@
         user-select:none;
     }
     .percentile-btn:hover{
-        border-color: rgba(37,99,235,.45);
-        background: rgba(37,99,235,.06);
+        border-color: rgba(80,102,88,.45);
+        background: rgba(80,102,88,.06);
     }
     .percentile-btn:active{ transform: translateY(1px); }
     .percentile-btn:focus-visible{
         outline:none;
         box-shadow: var(--focus);
-        border-color: rgba(37,99,235,.70);
+        border-color: rgba(80,102,88,.70);
     }
     .percentile-btn.active{
-        background: linear-gradient(90deg, rgba(37,99,235,.14), rgba(124,58,237,.10));
-        border-color: rgba(37,99,235,.55);
-        box-shadow: 0 10px 22px rgba(37,99,235,.12);
+        background: linear-gradient(90deg, rgba(80,102,88,.16), rgba(201,111,74,.09));
+        border-color: rgba(80,102,88,.55);
+        box-shadow: 0 10px 22px rgba(80,102,88,.12);
     }
 
     .main-grid{
@@ -149,7 +171,6 @@
         background: linear-gradient(180deg, var(--card), var(--card2));
         border: 1px solid var(--border);
         box-shadow: var(--shadow);
-        backdrop-filter: blur(10px);
     }
 
     .card h2{
@@ -170,9 +191,9 @@
     }
 
     .household-description{
-        background: rgba(37,99,235,.04);
+        background: #F3F6F3;
         border: 1px solid rgba(15,23,42,.10);
-        border-left: 4px solid rgba(37,99,235,.70);
+        border-left: 4px solid rgba(80,102,88,.72);
         padding: 14px 14px;
         border-radius: var(--radius2);
         margin-bottom: 14px;
@@ -245,8 +266,8 @@
     }
 
     .heating-equivalent{
-        background: linear-gradient(180deg, rgba(217,119,6,.10), rgba(217,119,6,.04));
-        border: 1px solid rgba(217,119,6,.28);
+        background: linear-gradient(180deg, rgba(201,111,74,.11), rgba(201,111,74,.045));
+        border: 1px solid rgba(201,111,74,.30);
         padding: 16px;
         border-radius: var(--radius2);
         margin-top: 16px;
@@ -256,7 +277,7 @@
     }
     .heating-equivalent.show{ display:block; }
     .heating-equivalent h3{
-        color: rgba(217,119,6,.92);
+        color: rgba(162,83,51,.94);
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: .12em;
@@ -265,7 +286,7 @@
     .heating-equivalent p{
         font-size: 18px;
         font-weight: 850;
-        color: rgba(145,64,14,.95);
+        color: #7E4F3B;
         letter-spacing: -0.01em;
     }
 
@@ -283,7 +304,7 @@
         text-align:center;
         margin-top: 10px;
         padding: 12px 12px;
-        background: linear-gradient(90deg, rgba(220,38,38,.10), rgba(37,99,235,.08));
+        background: linear-gradient(90deg, rgba(201,111,74,.11), rgba(80,102,88,.09));
         border: 1px solid rgba(15,23,42,.10);
         border-radius: var(--radius2);
         color: rgba(11,18,32,.86);
@@ -341,12 +362,12 @@
     }
 
     .comparison-current{
-        border-left: 4px solid rgba(220,38,38,.75);
-        background: linear-gradient(180deg, rgba(220,38,38,.06), rgba(255,255,255,.78));
+        border-left: 4px solid rgba(201,111,74,.75);
+        background: linear-gradient(180deg, rgba(201,111,74,.065), rgba(255,255,255,.94));
     }
     .comparison-fair{
-        border-left: 4px solid rgba(5,150,105,.72);
-        background: linear-gradient(180deg, rgba(5,150,105,.06), rgba(255,255,255,.78));
+        border-left: 4px solid rgba(80,102,88,.74);
+        background: linear-gradient(180deg, rgba(80,102,88,.065), rgba(255,255,255,.94));
     }
 
     .comparison-current-label, .comparison-fair-label{
@@ -378,7 +399,6 @@
         overflow:hidden;
         background: linear-gradient(180deg, rgba(255,255,255,.90), rgba(255,255,255,.82));
         box-shadow: var(--shadow2);
-        backdrop-filter: blur(10px);
     }
 
     .collapsible-header{
@@ -396,7 +416,7 @@
     }
 
     .collapsible-header:hover{
-        background: rgba(37,99,235,.06);
+        background: rgba(80,102,88,.06);
     }
 
     .collapsible-toggle{
@@ -438,7 +458,7 @@
 
     .card p{ color: var(--muted); }
 
-    ::selection{ background: rgba(37,99,235,.18); color: var(--text); }
+    ::selection{ background: rgba(80,102,88,.18); color: var(--text); }
     *::-webkit-scrollbar{ height:10px; width:10px; }
     *::-webkit-scrollbar-thumb{ background: rgba(15,23,42,.16); border-radius: 999px; }
     *::-webkit-scrollbar-track{ background: rgba(15,23,42,.04); }
@@ -447,8 +467,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Low-Carbon Levy Burden Explorer</h1>
-        <p class="subtitle">How energy transition costs burden different income groups</p>
+        <h1>Who Pays for the Energy Transition?</h1>
+        <p class="subtitle">How the UK’s choice to finance low-carbon infrastructure affects households at different income levels</p>
+
+        <div class="context-note">
+            <p><strong>What this tool is for:</strong> This is not an argument against the energy transition or in favour of fossil fuels. Building low-carbon infrastructure is essential. The tool asks how we choose to pay for it—through bills, taxes, public budgets, or other arrangements—and how those choices distribute costs across society.</p>
+            <p>It is based on <a href="https://doi.org/10.1080/09692290.2026.2695254" target="_blank" rel="noopener noreferrer"><em>Off the Books, onto the Bills: Levy-Backed Derisking and the UK’s Green Transition</em></a>. The household figures are illustrative rather than precise because the required data are incomplete and sometimes inconsistent.</p>
+        </div>
 
         <div class="controls">
             <button class="percentile-btn active" data-percentile="10">10th Percentile (Poor)</button>
@@ -528,7 +553,7 @@
             <!-- Tax-Fair Distribution Comparison -->
             <div class="card full-width">
                 <h2>If Levies Were Collected Using UK Income Tax Bands</h2>
-                <p style="margin-bottom: 20px; color: #c0c0c0;">
+                <p style="margin-bottom: 20px; color: var(--muted);">
                     Here we imagine funding the same total levy pot using a tiny income‑based charge that follows the UK tax bands: no charge on income below the personal allowance, a small charge on basic‑rate income, a higher charge on higher‑rate income, and the highest charge on additional‑rate income.
                 </p>
 
@@ -809,11 +834,11 @@
                         label: 'Levy Burden (% of After-Housing Income)',
                         data: burdenData,
                         backgroundColor: [
-                            '#ef4444',  // 10th - red (most burdened)
-                            '#f97316',  // 25th - orange
-                            '#eab308',  // 50th - yellow
-                            '#84cc16',  // 75th - lime
-                            '#22c55e'   // 90th - green (least burdened)
+                            '#C96F4A',  // 10th - peach (most burdened)
+                            '#D89473',  // 25th - muted peach
+                            '#C5B58F',  // 50th - sand
+                            '#8FA18E',  // 75th - soft sage
+                            '#506658'   // 90th - deep sage (least burdened)
                         ],
                         borderColor: 'transparent',
                         borderRadius: 8,
@@ -846,19 +871,19 @@
                             beginAtZero: true,
                             max: 0.9,
                             ticks: {
-                                color: '#a0a0a0',
+                                color: '#6C736E',
                                 callback: function(value) {
                                     return value.toFixed(2) + '%';
                                 }
                             },
                             grid: {
-                                color: 'rgba(255, 255, 255, 0.05)',
+                                color: 'rgba(80, 102, 88, 0.10)',
                                 drawBorder: false
                             }
                         },
                         x: {
                             ticks: {
-                                color: '#a0a0a0'
+                                color: '#6C736E'
                             },
                             grid: {
                                 display: false,
