@@ -5,15 +5,15 @@ layout: archive
 author_profile: true
 ---
 
-Interactive companions to my research on energy transitions, public finance, and energy security.
+<p class="tools-intro">Interactive companions to my research on energy transitions, public finance, and energy security.</p>
 
 <div class="tools-grid">
   <article class="tool-card">
     <div class="tool-card__content">
       <h2>Do Wind and Solar Improve Energy Security?</h2>
-      <p>This interactive evidence tool brings together 25 empirical studies of wind and solar deployment published between 2015 and 2025. It lets you compare findings by technology, scale, and outcome; examine cases across countries; and trace how deployment changed fuel imports, electricity prices, energy access, system reliability, and industrial control.</p>
-      <p>It also shows why the results varied. The evidence points to the importance of grids, finance, maintenance, market design, public institutions, manufacturing capacity, and supply chains in turning renewable deployment into durable energy-security gains.</p>
-      <p class="paper-basis"><strong>Based on:</strong> <em>From Renewable Deployment to Energy Security: The Institutional Foundations of the Renewable Security Dividend</em>.</p>
+      <p>Wind and solar are often said to make countries more energy secure, but the real-world picture is more complicated. This tool brings together 25 studies published between 2015 and 2025 to show what happened after renewable projects were built—from household solar in Australia and Bangladesh to national power systems in China, Germany, and South Africa.</p>
+      <p>You can compare the evidence by technology, country, scale, and outcome. Across the studies, renewables often reduced fuel imports, electricity costs, or exposure to price shocks. The gains were strongest where grids, finance, maintenance, and local supply chains could support them. In some cases, dependence shifted from imported fuels to imported equipment, technology, or finance.</p>
+      <p class="paper-basis"><strong>Based on:</strong> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7348962" target="_blank" rel="noopener noreferrer"><em>From Renewable Deployment to Energy Security: The Institutional Foundations of the Renewable Security Dividend</em></a>.</p>
     </div>
     <div class="tool-actions">
       <a href="/projects/renewable-energy-security-explorer/" class="tool-button">Explore the data</a>
@@ -23,9 +23,10 @@ Interactive companions to my research on energy transitions, public finance, and
   <article class="tool-card">
     <div class="tool-card__content">
       <h2>Who Pays for the Energy Transition?</h2>
-      <p>This interactive tool examines the United Kingdom’s choice to recover low-carbon policy costs through electricity bills. It shows how that burden varies across household income groups, compares the current system with an illustrative income-based alternative, and sets the UK approach alongside other ways of financing transition costs.</p>
-      <p class="tool-caveat"><strong>Purpose and limits:</strong> This is not an argument against the energy transition or in favour of fossil fuels. The transition is essential, and energy infrastructure always has to be paid for. The question is where those costs are placed and who bears them. Because the underlying household data are incomplete and sometimes inconsistent, the figures are illustrative rather than precise.</p>
-      <p class="paper-basis"><strong>Based on:</strong> <em>Off the Books, onto the Bills: Levy-Backed Derisking and the UK’s Green Transition</em>.</p>
+      <p>Britain pays for much of its low-carbon infrastructure through charges added to electricity bills. The same charge can weigh much more heavily on a low-income household because energy takes up a larger share of its budget. This tool shows how those costs are spread across income groups and why the way a transition is financed matters for fairness.</p>
+      <p>It compares the current bill-based approach with an income-based alternative and with examples of how other countries pay for similar policies. The comparison shows that moving more of the cost away from electricity bills could reduce the burden on poorer households while asking better-off households to contribute more.</p>
+      <p class="tool-caveat"><strong>Why this matters:</strong> This is not an argument against the energy transition or in favour of fossil fuels. Building low-carbon infrastructure is essential, and it has to be paid for. The question is how we choose to pay for it and how different choices share the costs across society.</p>
+      <p class="paper-basis"><strong>Based on:</strong> <a href="https://doi.org/10.1080/09692290.2026.2695254" target="_blank" rel="noopener noreferrer"><em>Off the Books, onto the Bills: Levy-Backed Derisking and the UK’s Green Transition</em></a>.</p>
     </div>
     <div class="tool-actions">
       <a href="/projects/levy-burden-explorer/" class="tool-button">Explore the data</a>
@@ -46,6 +47,11 @@ Interactive companions to my research on energy transitions, public finance, and
   gap: 1.15rem;
   align-items: stretch;
   margin-top: 1.5rem;
+}
+
+.tools-intro {
+  font-size: 0.95em;
+  line-height: 1.6;
 }
 
 .tool-card {
@@ -85,15 +91,15 @@ Interactive companions to my research on energy transitions, public finance, and
   padding: 0;
   border: 0;
   color: var(--tools-ink);
-  font-size: 1.3rem;
-  line-height: 1.25;
+  font-size: 1.25em;
+  line-height: 1.2;
 }
 
 .tool-card p {
   margin: 0 0 0.8rem;
   color: var(--tools-text);
-  font-size: 0.9rem;
-  line-height: 1.62;
+  font-size: 0.95em;
+  line-height: 1.6;
 }
 
 .tool-card p:last-child {
@@ -103,6 +109,11 @@ Interactive companions to my research on energy transitions, public finance, and
 .paper-basis {
   padding-top: 0.75rem;
   border-top: 1px solid rgba(80, 102, 88, 0.15);
+}
+
+.paper-basis a {
+  color: var(--tools-sage-dark);
+  font-weight: 600;
 }
 
 .tool-caveat {
